@@ -1,550 +1,339 @@
 # Generated from Clash.js
 proxy-groups:
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'Proxy'
+  - name: '🚀 节点选择'
     type: 'select'
     proxies:
-      - 'AUTO'
-      - 'HK'
-      - 'TW'
-      - 'JP'
-      - 'KR'
-      - 'US'
-      - 'DE'
-      - 'SG'
-      - 'FR'
-      - 'UK'
+      - '♻️ 自动选择'
+      - '🇭🇰 香港'
+      - '🇨🇳 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🌐 其他'
+      - '🚀 手动切换'
+      - 'DIRECT'
+  - name: '♻️ 自动选择'
+    type: 'url-test'
+    include-all: true
+    interval: 300
+    tolerance: 50
+  - name: '🚀 手动切换'
+    include-all: true
+    type: 'select'
+  - name: '🎯 全球直连'
+    type: 'select'
+    proxies:
+      - 'DIRECT'
+      - '🚀 节点选择'
+      - '♻️ 自动选择'
+  - name: '🛑 广告拦截'
+    type: 'select'
+    proxies:
+      - 'REJECT'
+      - 'DIRECT'
+  - name: '🍃 应用净化'
+    type: 'select'
+    proxies:
+      - 'REJECT'
+      - 'DIRECT'
+  - name: '🐟 漏网之鱼'
+    type: 'select'
+    proxies:
+      - '🚀 节点选择'
+      - '♻️ 自动选择'
+      - 'DIRECT'
+      - '🇭🇰 香港'
+      - '🇨🇳 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🌐 其他'
+      - '🚀 手动切换'
+  - name: '🍎 Apple'
+    type: 'select'
+    proxies:
+      - 'DIRECT'
+      - '🚀 节点选择'
+      - '🇭🇰 香港'
+      - '🇨🇳 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🌐 其他'
+      - 'REJECT'
+  - name: '📲 Telegram'
+    type: 'select'
+    proxies:
+      - '🚀 节点选择'
+      - '🇭🇰 香港'
+      - '🇨🇳 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🌐 其他'
       - 'DIRECT'
       - 'REJECT'
-    include-all: true
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png'
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'AUTO'
-    type: 'url-test'
-    include-all: true
-    tolerance: 50
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png'
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'Apple'
+  - name: '📹 YouTube'
     type: 'select'
     proxies:
-      - 'DIRECT'
-      - 'Proxy'
-      - 'HK'
-      - 'TW'
-      - 'JP'
-      - 'KR'
-      - 'US'
-      - 'DE'
-      - 'SG'
-      - 'FR'
-      - 'UK'
-      - 'REJECT'
-    include-all: true
-    exclude-filter: '(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置'
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png'
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'Telegram'
-    type: 'select'
-    proxies:
-      - 'Proxy'
-      - 'HK'
-      - 'TW'
-      - 'JP'
-      - 'KR'
-      - 'US'
-      - 'DE'
-      - 'SG'
-      - 'FR'
-      - 'UK'
+      - '🚀 节点选择'
+      - '🇭🇰 香港'
+      - '🇨🇳 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🌐 其他'
       - 'DIRECT'
       - 'REJECT'
-    include-all: true
-    exclude-filter: '(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置'
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png'
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'YouTube'
+  - name: '📺 BiliBili'
     type: 'select'
     proxies:
-      - 'Proxy'
-      - 'HK'
-      - 'TW'
-      - 'JP'
-      - 'KR'
-      - 'US'
-      - 'DE'
-      - 'SG'
-      - 'FR'
-      - 'UK'
       - 'DIRECT'
+      - '🚀 节点选择'
       - 'REJECT'
-    include-all: true
-    exclude-filter: '(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置'
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png'
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'BiliBili'
+      - '🇭🇰 香港'
+      - '🇨🇳 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🌐 其他'
+  - name: '🤖 OpenAI'
+    type: 'select'
+    proxies:
+      - '🚀 节点选择'
+      - '🇭🇰 香港'
+      - '🇨🇳 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🌐 其他'
+      - 'DIRECT'
+  - name: '✨ Gemini'
+    type: 'select'
+    proxies:
+      - '🚀 节点选择'
+      - '🇭🇰 香港'
+      - '🇨🇳 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🌐 其他'
+      - 'DIRECT'
+  - name: '🧠 Claude'
+    type: 'select'
+    proxies:
+      - '🚀 节点选择'
+      - '🇭🇰 香港'
+      - '🇨🇳 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🌐 其他'
+      - 'DIRECT'
+  - name: '🎵 TikTok'
+    type: 'select'
+    proxies:
+      - '🚀 节点选择'
+      - '🇭🇰 香港'
+      - '🇨🇳 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🌐 其他'
+      - 'DIRECT'
+  - name: '🎧 Spotify'
+    type: 'select'
+    proxies:
+      - '🚀 节点选择'
+      - '🇭🇰 香港'
+      - '🇨🇳 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🌐 其他'
+      - 'DIRECT'
+  - name: '🎬 Netflix'
+    type: 'select'
+    proxies:
+      - '🚀 节点选择'
+      - '🇭🇰 香港'
+      - '🇨🇳 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🌐 其他'
+      - 'DIRECT'
+  - name: '🏰 Disney'
+    type: 'select'
+    proxies:
+      - '🚀 节点选择'
+      - '🇭🇰 香港'
+      - '🇨🇳 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🌐 其他'
+      - 'DIRECT'
+  - name: '🔎 Google'
+    type: 'select'
+    proxies:
+      - '🚀 节点选择'
+      - '🇭🇰 香港'
+      - '🇨🇳 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🌐 其他'
+      - 'DIRECT'
+  - name: '☁️ OneDrive'
     type: 'select'
     proxies:
       - 'DIRECT'
-      - 'Proxy'
+      - '🚀 节点选择'
+      - '🇭🇰 香港'
+      - '🇨🇳 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🌐 其他'
+  - name: 'Ⓜ️ Microsoft'
+    type: 'select'
+    proxies:
+      - 'DIRECT'
+      - '🚀 节点选择'
       - 'REJECT'
-      - 'HK'
-      - 'TW'
-      - 'JP'
-      - 'KR'
-      - 'US'
-      - 'DE'
-      - 'SG'
-      - 'FR'
-      - 'UK'
-    include-all: true
-    exclude-filter: '(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置'
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili.png'
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'OpenAI'
+      - '🇭🇰 香港'
+      - '🇨🇳 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🌐 其他'
+  - name: '🐦 Twitter'
     type: 'select'
     proxies:
-      - 'Proxy'
-      - 'US'
-      - 'TW'
-      - 'JP'
-      - 'KR'
-      - 'HK'
-      - 'DE'
-      - 'SG'
-      - 'FR'
-      - 'UK'
+      - '🚀 节点选择'
+      - '🇭🇰 香港'
+      - '🇨🇳 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🌐 其他'
       - 'DIRECT'
-    include-all: true
-    exclude-filter: '(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置'
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png'
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'Gemini'
+  - name: '🎞️ Emby'
     type: 'select'
     proxies:
-      - 'Proxy'
-      - 'HK'
-      - 'TW'
-      - 'JP'
-      - 'KR'
-      - 'US'
-      - 'DE'
-      - 'SG'
-      - 'FR'
-      - 'UK'
+      - '🚀 节点选择'
+      - '🇭🇰 香港'
+      - '🇨🇳 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🌐 其他'
       - 'DIRECT'
-    include-all: true
-    exclude-filter: '(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置'
-    icon: 'https://cdn.jsdelivr.net/gh/guaishouxiaoqi/icons@master/Color/Gemini.png'
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'Claude'
-    type: 'select'
-    proxies:
-      - 'Proxy'
-      - 'US'
-      - 'TW'
-      - 'JP'
-      - 'KR'
-      - 'HK'
-      - 'DE'
-      - 'SG'
-      - 'FR'
-      - 'UK'
-      - 'DIRECT'
-    include-all: true
-    exclude-filter: '(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置'
-    icon: 'https://cdn.jsdelivr.net/gh/ke1ewang/Qi@master/Claude.png'
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'TikTok'
-    type: 'select'
-    proxies:
-      - 'Proxy'
-      - 'TW'
-      - 'HK'
-      - 'JP'
-      - 'KR'
-      - 'US'
-      - 'DE'
-      - 'SG'
-      - 'FR'
-      - 'UK'
-      - 'DIRECT'
-    include-all: true
-    exclude-filter: '(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置'
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png'
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'Spotify'
-    type: 'select'
-    proxies:
-      - 'Proxy'
-      - 'HK'
-      - 'TW'
-      - 'JP'
-      - 'KR'
-      - 'US'
-      - 'DE'
-      - 'SG'
-      - 'FR'
-      - 'UK'
-      - 'DIRECT'
-    include-all: true
-    exclude-filter: '(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置'
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png'
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'Netflix'
-    type: 'select'
-    proxies:
-      - 'Proxy'
-      - 'HK'
-      - 'TW'
-      - 'JP'
-      - 'KR'
-      - 'US'
-      - 'DE'
-      - 'SG'
-      - 'FR'
-      - 'UK'
-      - 'DIRECT'
-    include-all: true
-    exclude-filter: '(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置'
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png'
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'Disney'
-    type: 'select'
-    proxies:
-      - 'Proxy'
-      - 'HK'
-      - 'TW'
-      - 'JP'
-      - 'KR'
-      - 'US'
-      - 'DE'
-      - 'SG'
-      - 'FR'
-      - 'UK'
-      - 'DIRECT'
-    include-all: true
-    exclude-filter: '(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置'
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney.png'
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'Google'
-    type: 'select'
-    proxies:
-      - 'Proxy'
-      - 'HK'
-      - 'TW'
-      - 'JP'
-      - 'KR'
-      - 'US'
-      - 'DE'
-      - 'SG'
-      - 'FR'
-      - 'UK'
-      - 'DIRECT'
-    include-all: true
-    exclude-filter: '(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置'
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png'
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'OneDrive'
+  - name: '🎮 Steam'
     type: 'select'
     proxies:
       - 'DIRECT'
-      - 'Proxy'
-      - 'HK'
-      - 'TW'
-      - 'JP'
-      - 'KR'
-      - 'US'
-      - 'DE'
-      - 'SG'
-      - 'FR'
-      - 'UK'
+      - '🚀 节点选择'
+      - '🇭🇰 香港'
+      - '🇨🇳 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🌐 其他'
+      - '🚀 手动切换'
+  - name: '🇭🇰 香港'
     include-all: true
-    exclude-filter: '(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置'
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/OneDrive.png'
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'Microsoft'
-    type: 'select'
-    proxies:
-      - 'DIRECT'
-      - 'Proxy'
-      - 'REJECT'
-      - 'HK'
-      - 'TW'
-      - 'JP'
-      - 'KR'
-      - 'US'
-      - 'DE'
-      - 'SG'
-      - 'FR'
-      - 'UK'
-    include-all: true
-    exclude-filter: '(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置'
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png'
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'Twitter'
-    type: 'select'
-    proxies:
-      - 'Proxy'
-      - 'HK'
-      - 'TW'
-      - 'JP'
-      - 'KR'
-      - 'US'
-      - 'DE'
-      - 'SG'
-      - 'FR'
-      - 'UK'
-      - 'DIRECT'
-    include-all: true
-    exclude-filter: '(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置'
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Twitter.png'
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'Emby'
-    type: 'select'
-    proxies:
-      - 'Proxy'
-      - 'HK'
-      - 'TW'
-      - 'JP'
-      - 'KR'
-      - 'US'
-      - 'DE'
-      - 'SG'
-      - 'FR'
-      - 'UK'
-      - 'DIRECT'
-    include-all: true
-    exclude-filter: '(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置'
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Emby.png'
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'Steam'
-    type: 'select'
-    proxies:
-      - 'Proxy'
-      - 'HK'
-      - 'DIRECT'
-      - 'TW'
-      - 'JP'
-      - 'KR'
-      - 'US'
-      - 'DE'
-      - 'SG'
-      - 'FR'
-      - 'UK'
-    include-all: true
-    exclude-filter: '(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置'
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Steam.png'
-  -
-    interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'HK'
+    filter: '(?i)港|HK|Hong Kong|HongKong|hongkong'
     type: 'url-test'
-    include-all: true
-    filter: '香港|HK|🇭🇰'
-    tolerance: 50
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png'
-  -
     interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'TW'
-    type: 'url-test'
-    include-all: true
-    filter: '台湾|TW|🇹🇼'
     tolerance: 50
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png'
-  -
+  - name: '🇨🇳 台湾'
+    include-all: true
+    filter: '(?i)台|TW|Taiwan'
+    type: 'url-test'
     interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'JP'
-    type: 'url-test'
-    include-all: true
-    filter: '日本|JP|🇯🇵'
     tolerance: 50
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png'
-  -
+  - name: '🇰🇷 韩国'
+    include-all: true
+    filter: '(?i)韩|KR|Korea|KOR'
+    type: 'url-test'
     interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'KR'
-    type: 'url-test'
-    include-all: true
-    filter: '韩国|KR|🇰🇷'
     tolerance: 50
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png'
-  -
+  - name: '🇯🇵 日本'
+    include-all: true
+    filter: '(?i)日|JP|Japan'
+    type: 'url-test'
     interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'US'
-    type: 'url-test'
-    include-all: true
-    filter: '美国|US|🇺🇸'
     tolerance: 50
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png'
-  -
+  - name: '🇸🇬 新加坡'
+    include-all: true
+    filter: '(?i)新加坡|SG|Singapore'
+    type: 'url-test'
     interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'DE'
-    type: 'url-test'
-    include-all: true
-    filter: '德国|DE|🇩🇪'
     tolerance: 50
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Germany.png'
-  -
+  - name: '🇺🇲 美国'
+    include-all: true
+    filter: '(?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States'
+    type: 'url-test'
     interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'SG'
-    type: 'url-test'
-    include-all: true
-    filter: '新加坡|SG|🇸🇬'
     tolerance: 50
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png'
-  -
+  - name: '🇬🇧 英国'
+    include-all: true
+    filter: '(?i)英|GB|UK|United Kingdom'
+    type: 'url-test'
     interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'FR'
-    type: 'url-test'
-    include-all: true
-    filter: '法国|FR|🇫🇷'
     tolerance: 50
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/France.png'
-  -
+  - name: '🌐 其他'
+    include-all: true
+    exclude-filter: '(?i)港|HK|Hong Kong|HongKong|hongkong|台|TW|Taiwan|日|JP|Japan|韩|KR|Korea|KOR|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|英|GB|UK|United Kingdom|新加坡|SG|Singapore'
+    type: 'url-test'
     interval: 300
-    timeout: 3000
-    url: 'https://www.gstatic.com/generate_204'
-    max-failed-times: 3
-    hidden: false
-    name: 'UK'
-    type: 'url-test'
-    include-all: true
-    filter: '英国|GB|🇬🇧'
-    exclude-filter: 'Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置'
     tolerance: 50
-    icon: 'https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_Kingdom.png'
 rule-providers:
   Apple:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml'
     path: './ruleset/Apple.yaml'
@@ -552,7 +341,7 @@ rule-providers:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml'
     path: './ruleset/Telegram.yaml'
@@ -560,7 +349,7 @@ rule-providers:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml'
     path: './ruleset/YouTube.yaml'
@@ -568,7 +357,7 @@ rule-providers:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml'
     path: './ruleset/BiliBili.yaml'
@@ -576,7 +365,7 @@ rule-providers:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/TikTok/TikTok.yaml'
     path: './ruleset/TikTok.yaml'
@@ -584,7 +373,7 @@ rule-providers:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml'
     path: './ruleset/Spotify.yaml'
@@ -592,7 +381,7 @@ rule-providers:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix.yaml'
     path: './ruleset/Netflix.yaml'
@@ -600,7 +389,7 @@ rule-providers:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Disney/Disney.yaml'
     path: './ruleset/Disney.yaml'
@@ -608,7 +397,7 @@ rule-providers:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml'
     path: './ruleset/Google.yaml'
@@ -616,7 +405,7 @@ rule-providers:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml'
     path: './ruleset/OpenAI.yaml'
@@ -624,7 +413,7 @@ rule-providers:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml'
     path: './ruleset/Microsoft.yaml'
@@ -632,7 +421,7 @@ rule-providers:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Twitter/Twitter.yaml'
     path: './ruleset/Twitter.yaml'
@@ -640,7 +429,7 @@ rule-providers:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Steam/Steam.yaml'
     path: './ruleset/Steam.yaml'
@@ -648,7 +437,7 @@ rule-providers:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OneDrive/OneDrive.yaml'
     path: './ruleset/OneDrive.yaml'
@@ -656,7 +445,7 @@ rule-providers:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Emby/Emby.yaml'
     path: './ruleset/Emby.yaml'
@@ -664,7 +453,7 @@ rule-providers:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Gemini/Gemini.yaml'
     path: './ruleset/Gemini.yaml'
@@ -672,7 +461,7 @@ rule-providers:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Claude/Claude.yaml'
     path: './ruleset/Claude.yaml'
@@ -680,7 +469,7 @@ rule-providers:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub_No_Resolve.yaml'
     path: './ruleset/Github.yaml'
@@ -688,7 +477,7 @@ rule-providers:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/wanswu/my-backup@master/clash/rule/Global.yaml'
     path: './ruleset/Global.yaml'
@@ -696,28 +485,28 @@ rule-providers:
     type: 'http'
     format: 'yaml'
     interval: 86400
-    proxy: 'Proxy'
+    proxy: '🚀 节点选择'
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/wanswu/my-backup@master/clash/rule/ChinaCustom.yaml'
     path: './ruleset/ChinaCustom.yaml'
 rules:
-  - 'RULE-SET,Telegram,Telegram'
-  - 'RULE-SET,YouTube,YouTube'
-  - 'RULE-SET,Global,AUTO'
-  - 'RULE-SET,ChinaCustom,DIRECT'
-  - 'RULE-SET,BiliBili,BiliBili'
-  - 'RULE-SET,TikTok,TikTok'
-  - 'RULE-SET,Spotify,Spotify'
-  - 'RULE-SET,Netflix,Netflix'
-  - 'RULE-SET,Disney,Disney'
-  - 'RULE-SET,Google,Google'
-  - 'RULE-SET,OpenAI,OpenAI'
-  - 'RULE-SET,Microsoft,Microsoft'
-  - 'RULE-SET,Twitter,Twitter'
-  - 'RULE-SET,Steam,Steam'
-  - 'RULE-SET,OneDrive,OneDrive'
-  - 'RULE-SET,Emby,Emby'
-  - 'RULE-SET,Gemini,Gemini'
-  - 'RULE-SET,Claude,Claude'
-  - 'RULE-SET,Github,HK'
-  - 'MATCH,Proxy'
+  - 'RULE-SET,Telegram,📲 Telegram'
+  - 'RULE-SET,YouTube,📹 YouTube'
+  - 'RULE-SET,Global,♻️ 自动选择'
+  - 'RULE-SET,ChinaCustom,🎯 全球直连'
+  - 'RULE-SET,BiliBili,📺 BiliBili'
+  - 'RULE-SET,TikTok,🎵 TikTok'
+  - 'RULE-SET,Spotify,🎧 Spotify'
+  - 'RULE-SET,Netflix,🎬 Netflix'
+  - 'RULE-SET,Disney,🏰 Disney'
+  - 'RULE-SET,Google,🔎 Google'
+  - 'RULE-SET,OpenAI,🤖 OpenAI'
+  - 'RULE-SET,Microsoft,Ⓜ️ Microsoft'
+  - 'RULE-SET,Twitter,🐦 Twitter'
+  - 'RULE-SET,Steam,🎮 Steam'
+  - 'RULE-SET,OneDrive,☁️ OneDrive'
+  - 'RULE-SET,Emby,🎞️ Emby'
+  - 'RULE-SET,Gemini,✨ Gemini'
+  - 'RULE-SET,Claude,🧠 Claude'
+  - 'RULE-SET,Github,🇭🇰 香港'
+  - 'MATCH,🐟 漏网之鱼'
