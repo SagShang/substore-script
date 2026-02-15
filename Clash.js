@@ -21,35 +21,6 @@ function main(config) {
   // 返回修改后的配置
   return config;
 }
-// DNS配置
-const dnsConfig = {
-  "enable": true,
-  "ipv6": true,
-  "listen": ":53",
-  "prefer-h3": false,
-  "respect-rules": true,
-  "enhanced-mode": "fake-ip",
-  "fake-ip-range": "198.18.0.1/16",
-  "fake-ip-filter": [
-    // 本地主机/设备
-    "+.lan",
-    "+.local",
-    // Windows网络出现小地球图标
-    "+.msftconnecttest.com",
-    "+.msftncsi.com",
-    // QQ快速登录检测失败
-    "localhost.ptlogin2.qq.com",
-    "localhost.sec.qq.com",
-    // 微信快速登录检测失败
-    "localhost.work.weixin.qq.com"
-  ],
-  "use-hosts": false,
-  "use-system-hosts": false,
-  "nameserver": ["https://1.1.1.1/dns-query", "https://dns.google/dns-query"], // 默认的域名解析服务器
-  "default-nameserver": ["tls://223.5.5.5", "tls://119.29.29.29"],  //默认DNS 用于解析 DNS服务器 的域名
-  "proxy-server-nameserver": ['https://doh.pub/dns-query'],
-  "direct-nameserver": ['https://doh.pub/dns-query','https://dns.alidns.com/dns-query'],   //用于 direct 出口域名解析的 DNS 服务器
-};
 // 代理组通用配置
 const groupBaseOption = {
   "interval": 300,
