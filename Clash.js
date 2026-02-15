@@ -4,29 +4,6 @@
  * URL: https://github.com/wanswu/my-backup
  */
 
-// 多订阅合并，这里添加额外的地址
-const proxyProviders = {
-  "p1": {
-    "type": "http",
-    // 订阅 链接
-    "url": "https://baidu.com",
-    // 自动更新时间 86400(秒) / 3600 = 24小时
-    "interval": 86400,
-    "override": {
-      // 节点名称前缀 p1，用于区别机场节点
-      "additional-prefix": "p1 |"
-    }
-  },
-  "p2": {
-    "type": "http",
-    "url": "https://google.com",
-    "interval": 86400,
-    "override": {
-      "additional-prefix": "p2 |"
-    }
-  },
-}
-
 // 程序入口
 function main(config) {
   const proxyCount = config?.proxies?.length ?? 0;
@@ -37,11 +14,6 @@ function main(config) {
     throw new Error("配置文件中未找到任何代理");
   }
 
-  // 合并而非覆盖
-  config["proxy-providers"] = {
-    ...originalProviders,  // 保留原有配置
-    ...proxyProviders       // 合并新配置（同名则覆盖）
-  };
   // 覆盖原配置中DNS配置
   config["dns"] = dnsConfig;
   // 覆盖原配置中的代理组
