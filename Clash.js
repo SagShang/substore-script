@@ -14,19 +14,10 @@ function main(config) {
     throw new Error("配置文件中未找到任何代理");
   }
 
-  // 覆盖原配置中DNS配置
-  config["dns"] = dnsConfig;
-  // 覆盖原配置中的代理组
+  // 仅设置代理和规则
   config["proxy-groups"] = proxyGroupConfig;
-  // 覆盖原配置中的规则
   config["rule-providers"] = ruleProviders;
   config["rules"] = rules;
-  //覆盖通用配置
-  config["mixed-port"] = 7890;
-  config["allow-lan"] = true;
-  config["bind-address"] = "*";
-  config["ipv6"] = true;
-  config["unified-delay"] = true;
   // 返回修改后的配置
   return config;
 }
