@@ -640,6 +640,13 @@ rule-providers:
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Crypto/Crypto.yaml'
     path: './ruleset/Crypto.yaml'
+  CryptoCustom:
+    type: 'http'
+    format: 'yaml'
+    interval: 86400
+    behavior: 'classical'
+    url: 'https://sub.sagshang.com/Cvs8vWRV/api/file/CryptoCustom'
+    path: './ruleset/CryptoCustom.yaml'
 
   # 流媒体
   YouTube:
@@ -707,9 +714,8 @@ rules:
   - 'RULE-SET,GameDownloadCN,📥 下载工具'
   - 'RULE-SET,GameDownload,📥 下载工具'
   - 'RULE-SET,Game,🎮 游戏平台'
+  - 'RULE-SET,CryptoCustom,🪙 加密货币'
   - 'RULE-SET,Crypto,🪙 加密货币'
-  # 补充bybit规则
-  - 'DOMAIN-KEYWORD,bybit,🪙 加密货币'
   - 'RULE-SET,YouTube,📹 油管视频'
   - 'RULE-SET,Netflix,🎬 奈飞影视'
   - 'RULE-SET,Disney,🏰 迪士尼'
