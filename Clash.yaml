@@ -35,6 +35,7 @@ proxy-groups:
       - '🇩🇪 德国'
       - '🇦🇺 澳大利亚'
       - '🌐 自定义'
+    url: 'https://cp.cloudflare.com/generate_204'
     interval: 300
     tolerance: 50
   - name: '🔯 故障转移'
@@ -46,6 +47,7 @@ proxy-groups:
       - '🇺🇲 美国'
     url: 'https://cp.cloudflare.com/generate_204'
     interval: 900
+
   - name: '🤖 OpenAI'
     type: 'select'
     proxies:
@@ -130,7 +132,7 @@ proxy-groups:
       - '🏠 家宽'
       - '🧮 低倍率'
       - 'DIRECT'
-  - name: '🔎 Google'
+  - name: '🔎 谷歌搜索'
     type: 'select'
     proxies:
       - '🚀 手动选择'
@@ -151,7 +153,7 @@ proxy-groups:
       - '🏠 家宽'
       - '🧮 低倍率'
       - 'DIRECT'
-  - name: '📢 Google推送'
+  - name: 'Ⓜ️ 微软服务'
     type: 'select'
     proxies:
       - 'DIRECT'
@@ -172,7 +174,7 @@ proxy-groups:
       - '🚄 专线'
       - '🏠 家宽'
       - '🧮 低倍率'
-  - name: '🔎 Bing'
+  - name: '🍎 苹果服务'
     type: 'select'
     proxies:
       - 'DIRECT'
@@ -193,10 +195,9 @@ proxy-groups:
       - '🚄 专线'
       - '🏠 家宽'
       - '🧮 低倍率'
-  - name: '🍎 Apple'
+  - name: '📲 电报消息'
     type: 'select'
     proxies:
-      - 'DIRECT'
       - '🚀 手动选择'
       - '♻️ 自动切换'
       - '🔯 故障转移'
@@ -214,10 +215,10 @@ proxy-groups:
       - '🚄 专线'
       - '🏠 家宽'
       - '🧮 低倍率'
-  - name: 'Ⓜ️ Microsoft'
+      - 'DIRECT'
+  - name: '💬 WhatsApp'
     type: 'select'
     proxies:
-      - 'DIRECT'
       - '🚀 手动选择'
       - '♻️ 自动切换'
       - '🔯 故障转移'
@@ -235,9 +236,136 @@ proxy-groups:
       - '🚄 专线'
       - '🏠 家宽'
       - '🧮 低倍率'
+      - 'DIRECT'
+  - name: '🐦 推特社交'
+    type: 'select'
+    proxies:
+      - '🚀 手动选择'
+      - '♻️ 自动切换'
+      - '🔯 故障转移'
+      - '🇭🇰 香港'
+      - '🇹🇼 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🇫🇷 法国'
+      - '🇩🇪 德国'
+      - '🇦🇺 澳大利亚'
+      - '🌐 自定义'
+      - '🚄 专线'
+      - '🏠 家宽'
+      - '🧮 低倍率'
+      - 'DIRECT'
+  - name: '📘 脸书社交'
+    type: 'select'
+    proxies:
+      - '🚀 手动选择'
+      - '♻️ 自动切换'
+      - '🔯 故障转移'
+      - '🇭🇰 香港'
+      - '🇹🇼 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🇫🇷 法国'
+      - '🇩🇪 德国'
+      - '🇦🇺 澳大利亚'
+      - '🌐 自定义'
+      - '🚄 专线'
+      - '🏠 家宽'
+      - '🧮 低倍率'
+      - 'DIRECT'
+  - name: '🎮 游戏平台'
+    type: 'select'
+    proxies:
+      - '🚀 手动选择'
+      - '♻️ 自动切换'
+      - '🔯 故障转移'
+      - '🇭🇰 香港'
+      - '🇹🇼 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🇫🇷 法国'
+      - '🇩🇪 德国'
+      - '🇦🇺 澳大利亚'
+      - '🌐 自定义'
+      - '🚄 专线'
+      - '🏠 家宽'
+      - '🧮 低倍率'
+      - 'DIRECT'
+  - name: '💳 PayPal'
+    type: 'select'
+    proxies:
+      - '🚀 手动选择'
+      - '♻️ 自动切换'
+      - '🔯 故障转移'
+      - '🇭🇰 香港'
+      - '🇹🇼 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🇫🇷 法国'
+      - '🇩🇪 德国'
+      - '🇦🇺 澳大利亚'
+      - '🌐 自定义'
+      - '🚄 专线'
+      - '🏠 家宽'
+      - '🧮 低倍率'
+      - 'DIRECT'
+  - name: '🪙 加密货币'
+    type: 'select'
+    proxies:
+      - '🚀 手动选择'
+      - '♻️ 自动切换'
+      - '🔯 故障转移'
+      - '🇭🇰 香港'
+      - '🇹🇼 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🇫🇷 法国'
+      - '🇩🇪 德国'
+      - '🇦🇺 澳大利亚'
+      - '🌐 自定义'
+      - '🚄 专线'
+      - '🏠 家宽'
+      - '🧮 低倍率'
+      - 'DIRECT'
   - name: '☁️ OneDrive'
     type: 'select'
     proxies:
+      - '🚀 手动选择'
+      - '♻️ 自动切换'
+      - '🔯 故障转移'
+      - '🇭🇰 香港'
+      - '🇹🇼 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🇫🇷 法国'
+      - '🇩🇪 德国'
+      - '🇦🇺 澳大利亚'
+      - '🌐 自定义'
+      - '🚄 专线'
+      - '🏠 家宽'
+      - '🧮 低倍率'
+      - 'DIRECT'
+  - name: '📥 下载工具'
+    type: 'select'
+    proxies:
       - 'DIRECT'
       - '🚀 手动选择'
       - '♻️ 自动切换'
@@ -256,7 +384,7 @@ proxy-groups:
       - '🚄 专线'
       - '🏠 家宽'
       - '🧮 低倍率'
-  - name: '📲 Telegram'
+  - name: '📹 油管视频'
     type: 'select'
     proxies:
       - '🚀 手动选择'
@@ -273,11 +401,12 @@ proxy-groups:
       - '🇩🇪 德国'
       - '🇦🇺 澳大利亚'
       - '🌐 自定义'
+      - '🎞️ 流媒体'
       - '🚄 专线'
       - '🏠 家宽'
       - '🧮 低倍率'
       - 'DIRECT'
-  - name: '🐦 Twitter'
+  - name: '🎬 奈飞影视'
     type: 'select'
     proxies:
       - '🚀 手动选择'
@@ -294,11 +423,56 @@ proxy-groups:
       - '🇩🇪 德国'
       - '🇦🇺 澳大利亚'
       - '🌐 自定义'
+      - '🎞️ 流媒体'
       - '🚄 专线'
       - '🏠 家宽'
       - '🧮 低倍率'
       - 'DIRECT'
-  - name: '📹 YouTube'
+  - name: '🏰 迪士尼'
+    type: 'select'
+    proxies:
+      - '🚀 手动选择'
+      - '♻️ 自动切换'
+      - '🔯 故障转移'
+      - '🇭🇰 香港'
+      - '🇹🇼 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🇫🇷 法国'
+      - '🇩🇪 德国'
+      - '🇦🇺 澳大利亚'
+      - '🌐 自定义'
+      - '🎞️ 流媒体'
+      - '🚄 专线'
+      - '🏠 家宽'
+      - '🧮 低倍率'
+      - 'DIRECT'
+  - name: '📺 PrimeVideo'
+    type: 'select'
+    proxies:
+      - '🚀 手动选择'
+      - '♻️ 自动切换'
+      - '🔯 故障转移'
+      - '🇭🇰 香港'
+      - '🇹🇼 台湾'
+      - '🇰🇷 韩国'
+      - '🇯🇵 日本'
+      - '🇸🇬 新加坡'
+      - '🇺🇲 美国'
+      - '🇬🇧 英国'
+      - '🇫🇷 法国'
+      - '🇩🇪 德国'
+      - '🇦🇺 澳大利亚'
+      - '🌐 自定义'
+      - '🎞️ 流媒体'
+      - '🚄 专线'
+      - '🏠 家宽'
+      - '🧮 低倍率'
+      - 'DIRECT'
+  - name: '🎧 Spotify'
     type: 'select'
     proxies:
       - '🚀 手动选择'
@@ -342,71 +516,6 @@ proxy-groups:
       - '🏠 家宽'
       - '🧮 低倍率'
       - 'DIRECT'
-  - name: '🎧 Spotify'
-    type: 'select'
-    proxies:
-      - '🚀 手动选择'
-      - '♻️ 自动切换'
-      - '🔯 故障转移'
-      - '🇭🇰 香港'
-      - '🇹🇼 台湾'
-      - '🇰🇷 韩国'
-      - '🇯🇵 日本'
-      - '🇸🇬 新加坡'
-      - '🇺🇲 美国'
-      - '🇬🇧 英国'
-      - '🇫🇷 法国'
-      - '🇩🇪 德国'
-      - '🇦🇺 澳大利亚'
-      - '🌐 自定义'
-      - '🚄 专线'
-      - '🏠 家宽'
-      - '🧮 低倍率'
-      - 'DIRECT'
-  - name: '🎬 Netflix'
-    type: 'select'
-    proxies:
-      - '🚀 手动选择'
-      - '♻️ 自动切换'
-      - '🔯 故障转移'
-      - '🇭🇰 香港'
-      - '🇹🇼 台湾'
-      - '🇰🇷 韩国'
-      - '🇯🇵 日本'
-      - '🇸🇬 新加坡'
-      - '🇺🇲 美国'
-      - '🇬🇧 英国'
-      - '🇫🇷 法国'
-      - '🇩🇪 德国'
-      - '🇦🇺 澳大利亚'
-      - '🌐 自定义'
-      - '🎞️ 流媒体'
-      - '🚄 专线'
-      - '🏠 家宽'
-      - '🧮 低倍率'
-      - 'DIRECT'
-  - name: '🏰 Disney'
-    type: 'select'
-    proxies:
-      - '🚀 手动选择'
-      - '♻️ 自动切换'
-      - '🔯 故障转移'
-      - '🇭🇰 香港'
-      - '🇹🇼 台湾'
-      - '🇰🇷 韩国'
-      - '🇯🇵 日本'
-      - '🇸🇬 新加坡'
-      - '🇺🇲 美国'
-      - '🇬🇧 英国'
-      - '🇫🇷 法国'
-      - '🇩🇪 德国'
-      - '🇦🇺 澳大利亚'
-      - '🌐 自定义'
-      - '🎞️ 流媒体'
-      - '🚄 专线'
-      - '🏠 家宽'
-      - '🧮 低倍率'
-      - 'DIRECT'
   - name: '🎞️ Emby'
     type: 'select'
     proxies:
@@ -429,27 +538,6 @@ proxy-groups:
       - '🏠 家宽'
       - '🧮 低倍率'
       - 'DIRECT'
-  - name: '📺 哔哩哔哩'
-    type: 'select'
-    proxies:
-      - 'DIRECT'
-      - '🚀 手动选择'
-      - '♻️ 自动切换'
-      - '🔯 故障转移'
-      - '🇭🇰 香港'
-      - '🇹🇼 台湾'
-      - '🇰🇷 韩国'
-      - '🇯🇵 日本'
-      - '🇸🇬 新加坡'
-      - '🇺🇲 美国'
-      - '🇬🇧 英国'
-      - '🇫🇷 法国'
-      - '🇩🇪 德国'
-      - '🇦🇺 澳大利亚'
-      - '🌐 自定义'
-      - '🚄 专线'
-      - '🏠 家宽'
-      - '🧮 低倍率'
   - name: '📺 巴哈姆特'
     type: 'select'
     proxies:
@@ -467,153 +555,80 @@ proxy-groups:
       - '🇩🇪 德国'
       - '🇦🇺 澳大利亚'
       - '🌐 自定义'
-      - '🚄 专线'
-      - '🏠 家宽'
-      - '🧮 低倍率'
-      - 'DIRECT'
-  - name: '🎶 网易音乐'
-    type: 'select'
-    proxies:
-      - 'DIRECT'
-      - '🚀 手动选择'
-      - '♻️ 自动切换'
-      - '🔯 故障转移'
-      - '🇭🇰 香港'
-      - '🇹🇼 台湾'
-      - '🇰🇷 韩国'
-      - '🇯🇵 日本'
-      - '🇸🇬 新加坡'
-      - '🇺🇲 美国'
-      - '🇬🇧 英国'
-      - '🇫🇷 法国'
-      - '🇩🇪 德国'
-      - '🇦🇺 澳大利亚'
-      - '🌐 自定义'
-      - '🚄 专线'
-      - '🏠 家宽'
-      - '🧮 低倍率'
-  - name: '🌍 国外媒体'
-    type: 'select'
-    proxies:
-      - '🚀 手动选择'
-      - '♻️ 自动切换'
-      - '🔯 故障转移'
-      - '🇭🇰 香港'
-      - '🇹🇼 台湾'
-      - '🇰🇷 韩国'
-      - '🇯🇵 日本'
-      - '🇸🇬 新加坡'
-      - '🇺🇲 美国'
-      - '🇬🇧 英国'
-      - '🇫🇷 法国'
-      - '🇩🇪 德国'
-      - '🇦🇺 澳大利亚'
-      - '🌐 自定义'
       - '🎞️ 流媒体'
       - '🚄 专线'
       - '🏠 家宽'
       - '🧮 低倍率'
       - 'DIRECT'
-  - name: '🌏 国内媒体'
-    type: 'select'
-    proxies:
-      - 'DIRECT'
-      - '🚀 手动选择'
-      - '♻️ 自动切换'
-      - '🔯 故障转移'
-      - '🇭🇰 香港'
-      - '🇹🇼 台湾'
-      - '🇰🇷 韩国'
-      - '🇯🇵 日本'
-      - '🇸🇬 新加坡'
-      - '🇺🇲 美国'
-      - '🇬🇧 英国'
-      - '🇫🇷 法国'
-      - '🇩🇪 德国'
-      - '🇦🇺 澳大利亚'
-      - '🌐 自定义'
-      - '🚄 专线'
-      - '🏠 家宽'
-      - '🧮 低倍率'
-  - name: '🎮 游戏平台'
-    type: 'select'
-    proxies:
-      - '🚀 手动选择'
-      - '♻️ 自动切换'
-      - '🔯 故障转移'
-      - '🇭🇰 香港'
-      - '🇹🇼 台湾'
-      - '🇰🇷 韩国'
-      - '🇯🇵 日本'
-      - '🇸🇬 新加坡'
-      - '🇺🇲 美国'
-      - '🇬🇧 英国'
-      - '🇫🇷 法国'
-      - '🇩🇪 德国'
-      - '🇦🇺 澳大利亚'
-      - '🌐 自定义'
-      - '🚄 专线'
-      - '🏠 家宽'
-      - '🧮 低倍率'
-      - 'DIRECT'
+
   - name: '🇭🇰 香港'
     include-all: true
     filter: '(?i)港|HK|Hong Kong|HongKong|hongkong'
     type: 'url-test'
+    url: 'https://cp.cloudflare.com/generate_204'
     interval: 300
     tolerance: 50
   - name: '🇹🇼 台湾'
     include-all: true
     filter: '(?i)台|TW|Taiwan'
     type: 'url-test'
+    url: 'https://cp.cloudflare.com/generate_204'
     interval: 300
     tolerance: 50
   - name: '🇯🇵 日本'
     include-all: true
     filter: '(?i)日|JP|Japan'
     type: 'url-test'
+    url: 'https://cp.cloudflare.com/generate_204'
     interval: 300
     tolerance: 50
   - name: '🇰🇷 韩国'
     include-all: true
     filter: '(?i)韩|KR|Korea|KOR'
     type: 'url-test'
+    url: 'https://cp.cloudflare.com/generate_204'
     interval: 300
     tolerance: 50
   - name: '🇸🇬 新加坡'
     include-all: true
     filter: '(?i)新加坡|SG|Singapore'
     type: 'url-test'
+    url: 'https://cp.cloudflare.com/generate_204'
     interval: 300
     tolerance: 50
   - name: '🇺🇲 美国'
     include-all: true
     filter: '(?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States'
     type: 'url-test'
+    url: 'https://cp.cloudflare.com/generate_204'
     interval: 300
     tolerance: 50
   - name: '🇬🇧 英国'
     include-all: true
     filter: '(?i)英|GB|UK|United Kingdom'
     type: 'url-test'
+    url: 'https://cp.cloudflare.com/generate_204'
     interval: 300
     tolerance: 50
   - name: '🇫🇷 法国'
     include-all: true
     filter: '(?i)法|FR|France|Paris'
     type: 'url-test'
+    url: 'https://cp.cloudflare.com/generate_204'
     interval: 300
     tolerance: 50
   - name: '🇩🇪 德国'
     include-all: true
     filter: '(?i)德|DE|Germany|Frankfurt'
     type: 'url-test'
+    url: 'https://cp.cloudflare.com/generate_204'
     interval: 300
     tolerance: 50
   - name: '🇦🇺 澳大利亚'
     include-all: true
     filter: '(?i)澳大利亚|澳洲|悉尼|墨尔本|AU|Australia|Sydney|Melbourne'
     type: 'url-test'
+    url: 'https://cp.cloudflare.com/generate_204'
     interval: 300
     tolerance: 50
   - name: '🌐 自定义'
@@ -677,98 +692,25 @@ proxy-groups:
       - '🏠 家宽'
       - '🧮 低倍率'
       - 'DIRECT'
+
 rule-providers:
-  LocalAreaNetwork:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/LocalAreaNetwork.list
-    path: ./ruleset/LocalAreaNetwork.list
-    behavior: classical
+  # 国内直连
+  China:
+    type: 'http'
+    format: 'text'
     interval: 86400
-    format: text
-    type: http
-  UnBan:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/UnBan.list
-    path: ./ruleset/UnBan.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  BanAD:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/BanAD.list
-    path: ./ruleset/BanAD.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  BanProgramAD:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/BanProgramAD.list
-    path: ./ruleset/BanProgramAD.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  Apple:
+    behavior: 'classical'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMax/ChinaMax.list'
+    path: './ruleset/ChinaMax.list'
+  Local:
     type: 'http'
     format: 'yaml'
     interval: 86400
     behavior: 'classical'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml'
-    path: './ruleset/Apple.yaml'
-  Telegram:
-    type: 'http'
-    format: 'yaml'
-    interval: 86400
-    behavior: 'classical'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml'
-    path: './ruleset/Telegram.yaml'
-  YouTube:
-    type: 'http'
-    format: 'yaml'
-    interval: 86400
-    behavior: 'classical'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml'
-    path: './ruleset/YouTube.yaml'
-  BiliBili:
-    type: 'http'
-    format: 'yaml'
-    interval: 86400
-    behavior: 'classical'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml'
-    path: './ruleset/BiliBili.yaml'
-  TikTok:
-    type: 'http'
-    format: 'yaml'
-    interval: 86400
-    behavior: 'classical'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/TikTok/TikTok.yaml'
-    path: './ruleset/TikTok.yaml'
-  Spotify:
-    type: 'http'
-    format: 'yaml'
-    interval: 86400
-    behavior: 'classical'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml'
-    path: './ruleset/Spotify.yaml'
-  Netflix:
-    type: 'http'
-    format: 'yaml'
-    interval: 86400
-    behavior: 'classical'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix.yaml'
-    path: './ruleset/Netflix.yaml'
-  Disney:
-    type: 'http'
-    format: 'yaml'
-    interval: 86400
-    behavior: 'classical'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Disney/Disney.yaml'
-    path: './ruleset/Disney.yaml'
-  Google:
-    type: 'http'
-    format: 'yaml'
-    interval: 86400
-    behavior: 'classical'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml'
-    path: './ruleset/Google.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml'
+    path: './ruleset/Lan.yaml'
+
+  # AI与开发
   OpenAI:
     type: 'http'
     format: 'yaml'
@@ -776,41 +718,6 @@ rule-providers:
     behavior: 'classical'
     url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml'
     path: './ruleset/OpenAI.yaml'
-  Microsoft:
-    type: 'http'
-    format: 'yaml'
-    interval: 86400
-    behavior: 'classical'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml'
-    path: './ruleset/Microsoft.yaml'
-  Twitter:
-    type: 'http'
-    format: 'yaml'
-    interval: 86400
-    behavior: 'classical'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Twitter/Twitter.yaml'
-    path: './ruleset/Twitter.yaml'
-  Steam:
-    type: 'http'
-    format: 'yaml'
-    interval: 86400
-    behavior: 'classical'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Steam/Steam.yaml'
-    path: './ruleset/Steam.yaml'
-  OneDrive:
-    type: 'http'
-    format: 'yaml'
-    interval: 86400
-    behavior: 'classical'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OneDrive/OneDrive.yaml'
-    path: './ruleset/OneDrive.yaml'
-  Emby:
-    type: 'http'
-    format: 'yaml'
-    interval: 86400
-    behavior: 'classical'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Emby/Emby.yaml'
-    path: './ruleset/Emby.yaml'
   Gemini:
     type: 'http'
     format: 'yaml'
@@ -830,167 +737,212 @@ rule-providers:
     format: 'yaml'
     interval: 86400
     behavior: 'classical'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub_No_Resolve.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml'
     path: './ruleset/Github.yaml'
-  GoogleFCM:
+
+  # 大厂
+  Apple:
     type: 'http'
-    format: 'text'
+    format: 'yaml'
     interval: 86400
     behavior: 'classical'
-    url: 'https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/GoogleFCM.list'
-    path: './ruleset/GoogleFCM.list'
-  GoogleCN:
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml'
+    path: './ruleset/Apple.yaml'
+  Microsoft:
     type: 'http'
-    format: 'text'
+    format: 'yaml'
     interval: 86400
     behavior: 'classical'
-    url: 'https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/GoogleCN.list'
-    path: './ruleset/GoogleCN.list'
-  SteamCN:
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml'
+    path: './ruleset/Microsoft.yaml'
+  Google:
     type: 'http'
-    format: 'text'
+    format: 'yaml'
     interval: 86400
     behavior: 'classical'
-    url: 'https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/SteamCN.list'
-    path: './ruleset/SteamCN.list'
-  Bing:
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml'
+    path: './ruleset/Google.yaml'
+
+  # 社交通讯
+  Telegram:
     type: 'http'
-    format: 'text'
+    format: 'yaml'
     interval: 86400
     behavior: 'classical'
-    url: 'https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Bing.list'
-    path: './ruleset/Bing.list'
-  NetEaseMusic:
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml'
+    path: './ruleset/Telegram.yaml'
+  Whatsapp:
     type: 'http'
-    format: 'text'
+    format: 'yaml'
     interval: 86400
     behavior: 'classical'
-    url: 'https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/NetEaseMusic.list'
-    path: './ruleset/NetEaseMusic.list'
-  Epic:
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Whatsapp/Whatsapp.yaml'
+    path: './ruleset/Whatsapp.yaml'
+  Twitter:
     type: 'http'
-    format: 'text'
+    format: 'yaml'
     interval: 86400
     behavior: 'classical'
-    url: 'https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Epic.list'
-    path: './ruleset/Epic.list'
-  Origin:
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Twitter/Twitter.yaml'
+    path: './ruleset/Twitter.yaml'
+  Facebook:
     type: 'http'
-    format: 'text'
+    format: 'yaml'
     interval: 86400
     behavior: 'classical'
-    url: 'https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Origin.list'
-    path: './ruleset/Origin.list'
-  Sony:
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Facebook/Facebook.yaml'
+    path: './ruleset/Facebook.yaml'
+
+  # 游戏平台
+  Game:
     type: 'http'
-    format: 'text'
+    format: 'yaml'
     interval: 86400
     behavior: 'classical'
-    url: 'https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Sony.list'
-    path: './ruleset/Sony.list'
-  Nintendo:
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/Game.yaml'
+    path: './ruleset/Game.yaml'
+  GameDownload:
     type: 'http'
-    format: 'text'
+    format: 'yaml'
     interval: 86400
     behavior: 'classical'
-    url: 'https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Nintendo.list'
-    path: './ruleset/Nintendo.list'
-  Bahamut:
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/GameDownload/GameDownload.yaml'
+    path: './ruleset/GameDownload.yaml'
+  GameDownloadCN:
     type: 'http'
-    format: 'text'
+    format: 'yaml'
     interval: 86400
     behavior: 'classical'
-    url: 'https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Bahamut.list'
-    path: './ruleset/Bahamut.list'
-  BilibiliHMT:
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/GameDownloadCN/GameDownloadCN.yaml'
+    path: './ruleset/GameDownloadCN.yaml'
+
+  # 金融支付
+  PayPal:
     type: 'http'
-    format: 'text'
+    format: 'yaml'
     interval: 86400
     behavior: 'classical'
-    url: 'https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/BilibiliHMT.list'
-    path: './ruleset/BilibiliHMT.list'
-  ChinaMedia:
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/PayPal/PayPal.yaml'
+    path: './ruleset/PayPal.yaml'
+  Crypto:
     type: 'http'
-    format: 'text'
+    format: 'yaml'
     interval: 86400
     behavior: 'classical'
-    url: 'https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaMedia.list'
-    path: './ruleset/ChinaMedia.list'
-  ProxyMedia:
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Crypto/Crypto.yaml'
+    path: './ruleset/Crypto.yaml'
+
+  # 下载与网盘
+  OneDrive:
     type: 'http'
-    format: 'text'
+    format: 'yaml'
     interval: 86400
     behavior: 'classical'
-    url: 'https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ProxyMedia.list'
-    path: './ruleset/ProxyMedia.list'
-  ProxyGFWlist:
-    type: 'http'
-    format: 'text'
-    interval: 86400
-    behavior: 'classical'
-    url: 'https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ProxyGFWlist.list'
-    path: './ruleset/ProxyGFWlist.list'
-  ChinaDomain:
-    type: 'http'
-    format: 'text'
-    interval: 86400
-    behavior: 'domain'
-    url: 'https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaDomain.list'
-    path: './ruleset/ChinaDomain.list'
-  ChinaCompanyIp:
-    type: 'http'
-    format: 'text'
-    interval: 86400
-    behavior: 'ipcidr'
-    url: 'https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaCompanyIp.list'
-    path: './ruleset/ChinaCompanyIp.list'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OneDrive/OneDrive.yaml'
+    path: './ruleset/OneDrive.yaml'
   Download:
     type: 'http'
-    format: 'text'
+    format: 'yaml'
     interval: 86400
     behavior: 'classical'
-    url: 'https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Download.list'
-    path: './ruleset/Download.list'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Download/Download.yaml'
+    path: './ruleset/Download.yaml'
+
+  # 流媒体
+  YouTube:
+    type: 'http'
+    format: 'yaml'
+    interval: 86400
+    behavior: 'classical'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml'
+    path: './ruleset/YouTube.yaml'
+  Netflix:
+    type: 'http'
+    format: 'yaml'
+    interval: 86400
+    behavior: 'classical'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix.yaml'
+    path: './ruleset/Netflix.yaml'
+  Disney:
+    type: 'http'
+    format: 'yaml'
+    interval: 86400
+    behavior: 'classical'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Disney/Disney.yaml'
+    path: './ruleset/Disney.yaml'
+  PrimeVideo:
+    type: 'http'
+    format: 'yaml'
+    interval: 86400
+    behavior: 'classical'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/PrimeVideo/PrimeVideo.yaml'
+    path: './ruleset/PrimeVideo.yaml'
+  Spotify:
+    type: 'http'
+    format: 'yaml'
+    interval: 86400
+    behavior: 'classical'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml'
+    path: './ruleset/Spotify.yaml'
+  TikTok:
+    type: 'http'
+    format: 'yaml'
+    interval: 86400
+    behavior: 'classical'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/TikTok/TikTok.yaml'
+    path: './ruleset/TikTok.yaml'
+  Emby:
+    type: 'http'
+    format: 'yaml'
+    interval: 86400
+    behavior: 'classical'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Emby/Emby.yaml'
+    path: './ruleset/Emby.yaml'
+  Bahamut:
+    type: 'http'
+    format: 'yaml'
+    interval: 86400
+    behavior: 'classical'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bahamut/Bahamut.yaml'
+    path: './ruleset/Bahamut.yaml'
+
+  # 代理兜底
+  Global:
+    type: 'http'
+    format: 'yaml'
+    interval: 86400
+    behavior: 'classical'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Global/Global_Classical.yaml'
+    path: './ruleset/Global_Classical.yaml'
+
 rules:
-  - "RULE-SET,LocalAreaNetwork,🎯 全球直连"
-  - "RULE-SET,UnBan,🎯 全球直连"
-  - "RULE-SET,BanAD,🛑 广告拦截"
-  - "RULE-SET,BanProgramAD,🍃 应用净化"
-  - 'RULE-SET,GoogleFCM,📢 Google推送'
-  - 'RULE-SET,GoogleCN,🎯 全球直连'
-  - 'RULE-SET,SteamCN,🎯 全球直连'
-  - "RULE-SET,Apple,🍎 Apple"
-  - 'RULE-SET,Telegram,📲 Telegram'
-  - 'RULE-SET,Google,🔎 Google'
-  - 'RULE-SET,Bing,🔎 Bing'
+  - 'RULE-SET,Local,🎯 全球直连'
   - 'RULE-SET,OpenAI,🤖 OpenAI'
   - 'RULE-SET,Gemini,✨ Gemini'
   - 'RULE-SET,Claude,🧠 Claude'
-  - 'RULE-SET,Microsoft,Ⓜ️ Microsoft'
-  - 'RULE-SET,Twitter,🐦 Twitter'
-  - 'RULE-SET,OneDrive,☁️ OneDrive'
-  - 'RULE-SET,Epic,🎮 游戏平台'
-  - 'RULE-SET,Origin,🎮 游戏平台'
-  - 'RULE-SET,Sony,🎮 游戏平台'
-  - 'RULE-SET,Steam,🎮 游戏平台'
-  - 'RULE-SET,Nintendo,🎮 游戏平台'
-  - 'RULE-SET,BiliBili,📺 哔哩哔哩'
-  - 'RULE-SET,BilibiliHMT,📺 哔哩哔哩'
-  - 'RULE-SET,Bahamut,📺 巴哈姆特'
-  - 'RULE-SET,YouTube,📹 YouTube'
-  - 'RULE-SET,TikTok,🎵 TikTok'
-  - 'RULE-SET,Spotify,🎧 Spotify'
-  - 'RULE-SET,Netflix,🎬 Netflix'
-  - 'RULE-SET,Disney,🏰 Disney'
-  - 'RULE-SET,Emby,🎞️ Emby'
   - 'RULE-SET,Github,🐙 GitHub'
-  - 'RULE-SET,NetEaseMusic,🎶 网易音乐'
-  - 'RULE-SET,ProxyMedia,🌍 国外媒体'
-  - 'RULE-SET,ChinaMedia,🌏 国内媒体'
-  - 'RULE-SET,ProxyGFWlist,🚀 手动选择'
-  - 'RULE-SET,ChinaDomain,🎯 全球直连'
-  - 'RULE-SET,ChinaCompanyIp,🎯 全球直连'
-  - 'RULE-SET,Download,🎯 全球直连'
-  - 'GEOIP,CN,🎯 全球直连'
+  - 'RULE-SET,Google,🔎 谷歌搜索'
+  - 'RULE-SET,Microsoft,Ⓜ️ 微软服务'
+  - 'RULE-SET,Apple,🍎 苹果服务'
+  - 'RULE-SET,Telegram,📲 电报消息'
+  - 'RULE-SET,Twitter,🐦 推特社交'
+  - 'RULE-SET,Facebook,📘 脸书社交'
+  - 'RULE-SET,Whatsapp,💬 WhatsApp'
+  - 'RULE-SET,GameDownloadCN,🎯 全球直连'
+  - 'RULE-SET,GameDownload,🎮 游戏平台'
+  - 'RULE-SET,Game,🎮 游戏平台'
+  - 'RULE-SET,PayPal,💳 PayPal'
+  - 'RULE-SET,Crypto,🪙 加密货币'
+  - 'RULE-SET,OneDrive,☁️ OneDrive'
+  - 'RULE-SET,Download,📥 下载工具'
+  - 'RULE-SET,YouTube,📹 油管视频'
+  - 'RULE-SET,Netflix,🎬 奈飞影视'
+  - 'RULE-SET,Disney,🏰 迪士尼'
+  - 'RULE-SET,PrimeVideo,📺 PrimeVideo'
+  - 'RULE-SET,Spotify,🎧 Spotify'
+  - 'RULE-SET,TikTok,🎵 TikTok'
+  - 'RULE-SET,Emby,🎞️ Emby'
+  - 'RULE-SET,Bahamut,📺 巴哈姆特'
+  - 'RULE-SET,China,🎯 全球直连'
+  - 'RULE-SET,Global,🐟 漏网之鱼'
   - 'MATCH,🐟 漏网之鱼'
-
