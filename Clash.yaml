@@ -132,7 +132,7 @@ proxy-groups:
       - '🏠 家宽'
       - '🧮 低倍率'
       - 'DIRECT'
-  - name: '🔎 谷歌服务'
+  - name: '🅖 谷歌服务'
     type: 'select'
     proxies:
       - '🚀 手动选择'
@@ -779,7 +779,7 @@ rules:
   - 'RULE-SET,Facebook,📘 脸书社交'
   - 'RULE-SET,Microsoft,Ⓜ️ 微软服务'
   - 'RULE-SET,Apple,🍎 苹果服务'
-  - 'RULE-SET,Google,🔎 谷歌服务'
+  - 'RULE-SET,Google,🅖 谷歌服务'
   # 兜底策略
   - 'RULE-SET,China,🎯 全球直连'
   - 'MATCH,🐟 漏网之鱼'
