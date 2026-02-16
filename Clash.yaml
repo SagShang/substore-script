@@ -651,7 +651,7 @@ proxy-groups:
     tolerance: 50
   - name: '🇦🇺 澳大利亚'
     include-all: true
-    filter: '(?i)澳|AU|Australia|Sydney|Melbourne'
+    filter: '(?i)澳大利亚|澳洲|悉尼|墨尔本|AU|Australia|Sydney|Melbourne'
     type: 'url-test'
     interval: 300
     tolerance: 50
@@ -659,7 +659,7 @@ proxy-groups:
     type: 'select'
     include-all: true
     filter: '(?i)^.*$'
-    exclude-filter: '(?i)港|HK|Hong Kong|HongKong|hongkong|台|TW|Taiwan|韩|KR|Korea|KOR|日|JP|Japan|新加坡|SG|Singapore|美|US|United States|英|GB|UK|United Kingdom|法|FR|France|德|DE|Germany|澳|AU|Australia|Sydney|Melbourne|Paris|Frankfurt'
+    exclude-filter: '(?i)港|HK|Hong Kong|HongKong|hongkong|台|TW|Taiwan|韩|KR|Korea|KOR|日|JP|Japan|新加坡|SG|Singapore|美|US|United States|英|GB|UK|United Kingdom|法|FR|France|德|DE|Germany|澳大利亚|澳洲|悉尼|墨尔本|AU|Australia|Sydney|Melbourne|Paris|Frankfurt'
   - name: '🎞️ 流媒体节点'
     type: 'select'
     include-all: true
