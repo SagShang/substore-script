@@ -661,16 +661,6 @@ proxy-groups:
       - '🚀 手动选择'
       - '♻️ 自动切换'
       - '🔯 故障转移'
-  - name: '🛑 广告拦截'
-    type: 'select'
-    proxies:
-      - 'REJECT'
-      - 'DIRECT'
-  - name: '🍃 应用净化'
-    type: 'select'
-    proxies:
-      - 'REJECT'
-      - 'DIRECT'
   - name: '🐟 漏网之鱼'
     type: 'select'
     proxies:
