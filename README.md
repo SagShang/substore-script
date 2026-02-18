@@ -12,6 +12,7 @@
 
 ```text
 https://raw.githubusercontent.com/SagShang/substore-script/main/Clash.yaml
+https://gh-proxy.com/https://raw.githubusercontent.com/SagShang/substore-script/main/Clash_CN.yaml
 ```
 
 ## Clone
