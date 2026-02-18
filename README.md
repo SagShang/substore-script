@@ -11,7 +11,7 @@
 ## 快捷使用：
 
 ```text
-https://cdn.jsdelivr.net/gh/SagShang/substore-script@main/Clash.yaml
+https://raw.githubusercontent.com/SagShang/substore-script/main/Clash.yaml
 ```
 
 ## Clone
@@ -26,8 +26,8 @@ https://cdn.jsdelivr.net/gh/SagShang/substore-script@main/Clash.yaml
 # GitHub Raw
 https://raw.githubusercontent.com/<your-name>/<repo>/main/rename.js#in=zh&out=zh&flag&blgd&one
 
-# jsDelivr CDN
-https://cdn.jsdelivr.net/gh/<your-name>/<repo>@main/rename.js#in=zh&out=zh&flag&blgd&one
+# GitHub Raw (CDN replacement)
+https://raw.githubusercontent.com/<your-name>/<repo>/main/rename.js#in=zh&out=zh&flag&blgd&one
 ```
 
 ## rename.js 参数速查
