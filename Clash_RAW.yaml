@@ -1,0 +1,136 @@
+﻿# Created by SagShang
+# Clash routing config for Sub-Store: defines proxy groups, rule providers, and final routing rules.
+
+x-templates:
+  # proxy groups templates
+  group_select_base: &tpl_group_select_base {type: 'select'}
+  group_probe_base: &tpl_group_probe_base {url: 'https://cp.cloudflare.com/generate_204', hidden: false, lazy: true, interval: 300, timeout: 3000}
+  group_urltest_base: &tpl_group_urltest_base {<<: *tpl_group_probe_base, type: 'url-test', tolerance: 100}
+  group_fallback_base: &tpl_group_fallback_base {<<: *tpl_group_probe_base, type: 'fallback'}
+  group_loadbalance_base: &tpl_group_loadbalance_base {<<: *tpl_group_probe_base, type: 'load-balance', strategy: 'sticky-sessions', expected-status: 204}
+
+  # region filter templates
+  filter_region_hk: &tpl_filter_region_hk '(?i)(香港|港|Hong[\s_-]?Kong|\bHK\b|🇭🇰)'
+  filter_region_tw: &tpl_filter_region_tw '(?i)(台湾|台|Taiwan|Taipei|Kaohsiung|\bTW\b|\bTWN\b|🇹🇼)'
+  filter_region_jp: &tpl_filter_region_jp '(?i)(日本|日|Japan|Tokyo|Osaka|\bJP\b|\bJPN\b|🇯🇵)'
+  filter_region_kr: &tpl_filter_region_kr '(?i)(韩国|韩|Korea|Seoul|\bKR\b|\bKOR\b|🇰🇷)'
+  filter_region_sg: &tpl_filter_region_sg '(?i)(新加坡|狮城|Singapore|\bSG\b|\bSGP\b|🇸🇬)'
+  filter_region_us: &tpl_filter_region_us '(?i)(美国|美|United[\s_-]?States|America|\bUS\b|\bUSA\b|Los[\s_-]?Angeles|San[\s_-]?Jose|Santa[\s_-]?Clara|Seattle|Chicago|Dallas|Phoenix|Portland|Oregon|Fremont|Las[\s_-]?Vegas|Silicon[\s_-]?Valley|🇺🇸|🇺🇲)'
+  filter_region_gb: &tpl_filter_region_gb '(?i)(英国|英|United[\s_-]?Kingdom|Great[\s_-]?Britain|Britain|England|London|Manchester|\bUK\b|\bGB\b|🇬🇧)'
+  filter_region_de: &tpl_filter_region_de '(?i)(德国|德|Germany|Deutschland|Frankfurt|Berlin|Munich|\bDE\b|🇩🇪)'
+
+  # proxy groups list templates
+  group_select_manual: &tpl_group_select_manual {<<: *tpl_group_select_base, proxies: ['♻️ 自动切换', '🔯 故障转移', '⚖️ 负载均衡', '🇭🇰 香港', '🇹🇼 台湾', '🇰🇷 韩国', '🇯🇵 日本', '🇸🇬 新加坡', '🇺🇲 美国', '🇬🇧 英国', '🇩🇪 德国', '🌍 全球自选', 'DIRECT']}
+  group_urltest_auto: &tpl_group_urltest_auto {<<: *tpl_group_urltest_base, proxies: ['🇭🇰 香港', '🇹🇼 台湾', '🇰🇷 韩国', '🇯🇵 日本', '🇸🇬 新加坡', '🇺🇲 美国', '🇬🇧 英国', '🇩🇪 德国', '🌍 全球自选']}
+  group_fallback_failover: &tpl_group_fallback_failover {<<: *tpl_group_fallback_base, proxies: ['🇭🇰 香港', '🇯🇵 日本', '🇸🇬 新加坡', '🇺🇲 美国']}
+  group_loadbalance_hk: &tpl_group_loadbalance_hk {<<: *tpl_group_loadbalance_base, include-all: true, filter: *tpl_filter_region_hk}
+  group_select_full: &tpl_group_select_full {<<: *tpl_group_select_base, proxies: ['🚀 手动选择', '♻️ 自动切换', '🔯 故障转移', '⚖️ 负载均衡', '🇭🇰 香港', '🇹🇼 台湾', '🇰🇷 韩国', '🇯🇵 日本', '🇸🇬 新加坡', '🇺🇲 美国', '🇬🇧 英国', '🇩🇪 德国', '🌍 全球自选', 'DIRECT']}
+  group_select_direct_first: &tpl_group_select_direct_first {<<: *tpl_group_select_base, proxies: ['DIRECT', '🚀 手动选择', '♻️ 自动切换', '🔯 故障转移', '⚖️ 负载均衡', '🇭🇰 香港', '🇹🇼 台湾', '🇰🇷 韩国', '🇯🇵 日本', '🇸🇬 新加坡', '🇺🇲 美国', '🇬🇧 英国', '🇩🇪 德国', '🌍 全球自选']}
+  group_urltest_region: &tpl_group_urltest_region {<<: *tpl_group_urltest_base, include-all: true, hidden: true}
+  group_select_include_all: &tpl_group_select_include_all {<<: *tpl_group_select_base, include-all: true}
+
+  # rule providers templates
+  provider_http_base: &tpl_provider_http_base {type: 'http', interval: 86400, behavior: 'classical'}
+  provider_http_yaml: &tpl_provider_http_yaml {<<: *tpl_provider_http_base, format: 'yaml'}
+  provider_http_text: &tpl_provider_http_text {<<: *tpl_provider_http_base, format: 'text'}
+
+proxy-groups:
+  # core groups
+  - {name: '🚀 手动选择', <<: *tpl_group_select_manual}
+  - {name: '♻️ 自动切换', <<: *tpl_group_urltest_auto}
+  - {name: '🔯 故障转移', <<: *tpl_group_fallback_failover}
+  - {name: '⚖️ 负载均衡', <<: *tpl_group_loadbalance_hk}
+
+  # service groups
+  - {name: '🤖 OpenAI', <<: *tpl_group_select_full}
+  - {name: '✨ Gemini', <<: *tpl_group_select_full}
+  - {name: '🧠 Claude', <<: *tpl_group_select_full}
+  - {name: '🐙 GitHub', <<: *tpl_group_select_full}
+  - {name: '🌐 谷歌服务', <<: *tpl_group_select_full}
+  - {name: '🍎 苹果服务', <<: *tpl_group_select_direct_first}
+  - {name: 'Ⓜ️ 微软服务', <<: *tpl_group_select_direct_first}
+  - {name: '☁️ 微软网盘', <<: *tpl_group_select_full}
+  - {name: '📲 电报消息', <<: *tpl_group_select_full}
+  - {name: '🐦 推特社交', <<: *tpl_group_select_full}
+  - {name: '📘 脸书社交', <<: *tpl_group_select_full}
+  - {name: '📹 油管视频', <<: *tpl_group_select_full}
+  - {name: '🎬 奈飞影视', <<: *tpl_group_select_full}
+  - {name: '🏰 迪士尼', <<: *tpl_group_select_full}
+  - {name: '🎧 Spotify', <<: *tpl_group_select_full}
+  - {name: '🎵 TikTok', <<: *tpl_group_select_full}
+  - {name: '🎮 游戏平台', <<: *tpl_group_select_full}
+  - {name: '📥 下载工具', <<: *tpl_group_select_direct_first}
+  - {name: '🪙 加密货币', <<: *tpl_group_select_full}
+
+  # region groups
+  - {name: '🇭🇰 香港', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_hk}
+  - {name: '🇹🇼 台湾', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_tw}
+  - {name: '🇯🇵 日本', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_jp}
+  - {name: '🇰🇷 韩国', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_kr}
+  - {name: '🇸🇬 新加坡', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_sg}
+  - {name: '🇺🇲 美国', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_us}
+  - {name: '🇬🇧 英国', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_gb}
+  - {name: '🇩🇪 德国', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_de}
+
+  # fallback groups
+  - {name: '🌍 全球自选', <<: *tpl_group_select_include_all}
+  - {name: '🎯 全球直连', <<: *tpl_group_select_direct_first}
+  - {name: '🐟 漏网之鱼', <<: *tpl_group_select_full}
+
+rule-providers:
+  # 1. base rules
+  Local: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml', path: './ruleset/Lan.yaml'}
+  China: {<<: *tpl_provider_http_text, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.list', path: './ruleset/ChinaMax.list'}
+
+  # 2. service rules
+  OpenAI: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml', path: './ruleset/OpenAI.yaml'}
+  Gemini: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.yaml', path: './ruleset/Gemini.yaml'}
+  Claude: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml', path: './ruleset/Claude.yaml'}
+  Github: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml', path: './ruleset/Github.yaml'}
+  Apple: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical.yaml', path: './ruleset/Apple.yaml'}
+  Microsoft: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml', path: './ruleset/Microsoft.yaml'}
+  Google: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml', path: './ruleset/Google.yaml'}
+  Telegram: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml', path: './ruleset/Telegram.yaml'}
+  Twitter: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml', path: './ruleset/Twitter.yaml'}
+  Facebook: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml', path: './ruleset/Facebook.yaml'}
+  Game: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml', path: './ruleset/Game.yaml'}
+  GameDownload: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownload/GameDownload.yaml', path: './ruleset/GameDownload.yaml'}
+  GameDownloadCN: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownloadCN/GameDownloadCN.yaml', path: './ruleset/GameDownloadCN.yaml'}
+  Crypto: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Crypto/Crypto.yaml', path: './ruleset/Crypto.yaml'}
+  YouTube: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml', path: './ruleset/YouTube.yaml'}
+  Netflix: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml', path: './ruleset/Netflix.yaml'}
+  Disney: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml', path: './ruleset/Disney.yaml'}
+  Spotify: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml', path: './ruleset/Spotify.yaml'}
+  TikTok: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml', path: './ruleset/TikTok.yaml'}
+  OneDrive: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml', path: './ruleset/OneDrive.yaml'}
+  Download: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml', path: './ruleset/Download.yaml'}
+
+  # 3. custom rules
+  CryptoCustom: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/SagShang/substore-script/main/CryptoCustom.yaml', path: './ruleset/CryptoCustom.yaml'}
+
+rules:
+  - 'RULE-SET,Local,🎯 全球直连'
+  - 'RULE-SET,OpenAI,🤖 OpenAI'
+  - 'RULE-SET,Gemini,✨ Gemini'
+  - 'RULE-SET,Claude,🧠 Claude'
+  - 'RULE-SET,Github,🐙 GitHub'
+  - 'RULE-SET,OneDrive,☁️ 微软网盘'
+  - 'RULE-SET,Download,📥 下载工具'
+  - 'RULE-SET,GameDownloadCN,📥 下载工具'
+  - 'RULE-SET,GameDownload,📥 下载工具'
+  - 'RULE-SET,Game,🎮 游戏平台'
+  - 'RULE-SET,CryptoCustom,🪙 加密货币'
+  - 'RULE-SET,Crypto,🪙 加密货币'
+  - 'RULE-SET,YouTube,📹 油管视频'
+  - 'RULE-SET,Netflix,🎬 奈飞影视'
+  - 'RULE-SET,Disney,🏰 迪士尼'
+  - 'RULE-SET,Spotify,🎧 Spotify'
+  - 'RULE-SET,TikTok,🎵 TikTok'
+  - 'RULE-SET,Telegram,📲 电报消息'
+  - 'RULE-SET,Twitter,🐦 推特社交'
+  - 'RULE-SET,Facebook,📘 脸书社交'
+  - 'RULE-SET,Microsoft,Ⓜ️ 微软服务'
+  - 'RULE-SET,Apple,🍎 苹果服务'
+  - 'RULE-SET,Google,🌐 谷歌服务'
+  - 'RULE-SET,China,🎯 全球直连'
+  - 'MATCH,🐟 漏网之鱼'
