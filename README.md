@@ -8,7 +8,13 @@
 - `rename.js`：Sub-Store 节点重命名脚本，支持地区识别、倍率保留、前缀、国旗等参数。
 - `ACL4SSR_Online_Full.yaml`：对照/参考配置。
 
-## 快速使用
+## 快捷使用：
+
+```text
+https://cdn.jsdelivr.net/gh/SagShang/substore-script@main/Clash.yaml
+```
+
+## Clone
 
 1. 将本仓库上传到你自己的 GitHub（或其他可直链访问的位置）。
 2. 在 Sub-Store 脚本操作中使用 `rename.js` 的直链。
