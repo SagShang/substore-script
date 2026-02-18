@@ -79,34 +79,34 @@ proxy-groups:
 
 rule-providers:
   # 1. base rules
-  Local: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml', path: './ruleset/Lan.yaml'}
-  China: {<<: *tpl_provider_http_text, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.list', path: './ruleset/ChinaMax.list'}
+  Local: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml', path: './ruleset/Lan.yaml'}
+  China: {<<: *tpl_provider_http_text, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMax/ChinaMax.list', path: './ruleset/ChinaMax.list'}
 
   # 2. service rules
-  OpenAI: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml', path: './ruleset/OpenAI.yaml'}
-  Gemini: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.yaml', path: './ruleset/Gemini.yaml'}
-  Claude: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml', path: './ruleset/Claude.yaml'}
-  Github: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml', path: './ruleset/Github.yaml'}
-  Apple: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical.yaml', path: './ruleset/Apple.yaml'}
-  Microsoft: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml', path: './ruleset/Microsoft.yaml'}
-  Google: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml', path: './ruleset/Google.yaml'}
-  Telegram: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml', path: './ruleset/Telegram.yaml'}
-  Twitter: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml', path: './ruleset/Twitter.yaml'}
-  Facebook: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml', path: './ruleset/Facebook.yaml'}
-  Game: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml', path: './ruleset/Game.yaml'}
-  GameDownload: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownload/GameDownload.yaml', path: './ruleset/GameDownload.yaml'}
-  GameDownloadCN: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownloadCN/GameDownloadCN.yaml', path: './ruleset/GameDownloadCN.yaml'}
-  Crypto: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Crypto/Crypto.yaml', path: './ruleset/Crypto.yaml'}
-  YouTube: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml', path: './ruleset/YouTube.yaml'}
-  Netflix: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml', path: './ruleset/Netflix.yaml'}
-  Disney: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml', path: './ruleset/Disney.yaml'}
-  Spotify: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml', path: './ruleset/Spotify.yaml'}
-  TikTok: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml', path: './ruleset/TikTok.yaml'}
-  OneDrive: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml', path: './ruleset/OneDrive.yaml'}
-  Download: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml', path: './ruleset/Download.yaml'}
+  OpenAI: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml', path: './ruleset/OpenAI.yaml'}
+  Gemini: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Gemini/Gemini.yaml', path: './ruleset/Gemini.yaml'}
+  Claude: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Claude/Claude.yaml', path: './ruleset/Claude.yaml'}
+  Github: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml', path: './ruleset/Github.yaml'}
+  Apple: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml', path: './ruleset/Apple.yaml'}
+  Microsoft: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml', path: './ruleset/Microsoft.yaml'}
+  Google: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml', path: './ruleset/Google.yaml'}
+  Telegram: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml', path: './ruleset/Telegram.yaml'}
+  Twitter: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Twitter/Twitter.yaml', path: './ruleset/Twitter.yaml'}
+  Facebook: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Facebook/Facebook.yaml', path: './ruleset/Facebook.yaml'}
+  Game: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/Game.yaml', path: './ruleset/Game.yaml'}
+  GameDownload: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/GameDownload/GameDownload.yaml', path: './ruleset/GameDownload.yaml'}
+  GameDownloadCN: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/GameDownloadCN/GameDownloadCN.yaml', path: './ruleset/GameDownloadCN.yaml'}
+  Crypto: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Crypto/Crypto.yaml', path: './ruleset/Crypto.yaml'}
+  YouTube: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml', path: './ruleset/YouTube.yaml'}
+  Netflix: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix.yaml', path: './ruleset/Netflix.yaml'}
+  Disney: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Disney/Disney.yaml', path: './ruleset/Disney.yaml'}
+  Spotify: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml', path: './ruleset/Spotify.yaml'}
+  TikTok: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/TikTok/TikTok.yaml', path: './ruleset/TikTok.yaml'}
+  OneDrive: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OneDrive/OneDrive.yaml', path: './ruleset/OneDrive.yaml'}
+  Download: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Download/Download.yaml', path: './ruleset/Download.yaml'}
 
   # 3. custom rules
-  CryptoCustom: {<<: *tpl_provider_http_yaml, url: 'https://raw.githubusercontent.com/SagShang/substore-script/main/CryptoCustom.yaml', path: './ruleset/CryptoCustom.yaml'}
+  CryptoCustom: {<<: *tpl_provider_http_yaml, url: 'https://cdn.jsdelivr.net/gh/SagShang/substore-script@main/CryptoCustom.yaml', path: './ruleset/CryptoCustom.yaml'}
 
 rules:
   - 'RULE-SET,Local,🎯 全球直连'
