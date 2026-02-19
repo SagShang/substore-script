@@ -1,7 +1,7 @@
 ﻿# Created by SagShang
 # Clash routing config for Sub-Store: defines proxy groups, rule providers, and final routing rules.
 
-geodata-mode: false
+geodata-mode: true
 geo-auto-update: true
 geo-update-interval: 24
 geox-url:
@@ -51,6 +51,8 @@ dns:
     - 'time.*.gov'
     - '+.ntp.org'
     - '+.pool.ntp.org'
+    - 'geosite:connectivity-check'
+    - 'geosite:private'
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
