@@ -129,7 +129,6 @@ proxy-groups:
   - {name: '🌐 谷歌服务', <<: *tpl_group_select_full}
   - {name: '🍎 苹果服务', <<: *tpl_group_select_direct_first}
   - {name: 'Ⓜ️ 微软服务', <<: *tpl_group_select_direct_first}
-  - {name: '☁️ 微软网盘', <<: *tpl_group_select_full}
   - {name: '📲 电报消息', <<: *tpl_group_select_full}
   - {name: '🐦 推特社交', <<: *tpl_group_select_full}
   - {name: '📘 脸书社交', <<: *tpl_group_select_full}
@@ -167,7 +166,6 @@ rules:
   - 'GEOSITE,category-ads-all,🧹 网络净化'
   - 'GEOSITE,category-porn,🧹 网络净化'
   - 'GEOSITE,category-ai-!cn,🤖 人工智能'
-  - 'GEOSITE,onedrive,☁️ 微软网盘'
   - 'GEOSITE,category-cryptocurrency,🪙 加密货币'
   - 'GEOSITE,category-public-tracker,🧲 BT下载'
   - 'GEOSITE,category-pt,🧲 BT下载'
