@@ -35,6 +35,7 @@ dns:
   enable: true
   listen: 0.0.0.0:1053
   ipv6: false
+  respect-rules: true
   prefer-h3: false
   use-hosts: true
   use-system-hosts: false
@@ -81,7 +82,6 @@ dns:
       - gfw
     ipcidr:
       - 240.0.0.0/4
-  respect-rules: true
 
 x-templates:
   # proxy groups templates
