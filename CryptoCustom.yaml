@@ -1,3 +1,4 @@
 payload:
   - DOMAIN-KEYWORD,bybit
+  - DOMAIN-KEYWORD,binance
   - DOMAIN-SUFFIX,bnbstatic.com
