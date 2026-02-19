@@ -180,12 +180,16 @@ rules:
   # 流媒体和社交通讯
   - 'GEOSITE,youtube,📹 油管视频'
   - 'GEOSITE,netflix,🎬 奈飞影视'
+  - 'GEOIP,netflix,🎬 奈飞影视,no-resolve'
   - 'GEOSITE,disney,🏰 迪士尼'
   - 'GEOSITE,spotify,🎧 Spotify'
   - 'GEOSITE,tiktok,🎵 TikTok'
   - 'GEOSITE,telegram,📲 电报消息'
+  - 'GEOIP,telegram,📲 电报消息,no-resolve'
   - 'GEOSITE,twitter,🐦 推特社交'
+  - 'GEOIP,twitter,🐦 推特社交,no-resolve'
   - 'GEOSITE,facebook,📘 脸书社交'
+  - 'GEOIP,facebook,📘 脸书社交,no-resolve'
 
   # 大厂服务
   - 'GEOSITE,microsoft@cn,🎯 全球直连'
@@ -198,9 +202,4 @@ rules:
   # 兜底策略
   - 'GEOSITE,cn,🎯 全球直连'
   - 'GEOIP,CN,🎯 全球直连,no-resolve'
-  - 'GEOIP,telegram,📲 电报消息,no-resolve'
-  - 'GEOIP,netflix,🎬 奈飞影视,no-resolve'
-  - 'GEOIP,twitter,🐦 推特社交,no-resolve'
-  - 'GEOIP,facebook,📘 脸书社交,no-resolve'
-  - 'GEOIP,google,🌐 谷歌服务,no-resolve'
   - 'MATCH,🐟 漏网之鱼'
