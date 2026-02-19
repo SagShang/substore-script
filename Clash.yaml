@@ -1,6 +1,36 @@
 ﻿# Created by SagShang
 # Clash routing config for Sub-Store: defines proxy groups, rule providers, and final routing rules.
 
+geodata-mode: false
+geo-auto-update: true
+geo-update-interval: 24
+geox-url:
+  geoip: 'https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat'
+  geosite: 'https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat'
+  mmdb: 'https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb'
+  asn: 'https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb'
+
+unified-delay: true
+tcp-concurrent: true
+
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+sniffer:
+  enable: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  skip-domain:
+    - 'Mijia Cloud'
+    - '+.push.apple.com'
+
 dns:
   enable: true
   listen: 0.0.0.0:1053
@@ -183,4 +213,5 @@ rules:
   - 'RULE-SET,Apple,🍎 苹果服务'
   - 'RULE-SET,Google,🌐 谷歌服务'
   - 'RULE-SET,China,🎯 全球直连'
+  - 'GEOIP,CN,🎯 全球直连,no-resolve'
   - 'MATCH,🐟 漏网之鱼'
