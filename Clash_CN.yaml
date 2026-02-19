@@ -183,9 +183,9 @@ rules:
 
   # 游戏平台和游戏下载
   - 'GEOSITE,category-game-platforms-download@cn,🎯 全球直连'
-  - 'GEOSITE,category-game-platforms-download,📥 游戏下载'
+  - 'GEOSITE,category-game-platforms-download,🎮 游戏平台'
   - 'GEOSITE,category-games-cn,🎯 全球直连'
-  - 'GEOSITE,category-games-!cn@cn,🎯 全球直连'
+  - 'GEOSITE,category-games-!cn@cn,📥 游戏下载'
   - 'GEOSITE,category-games-!cn,🎮 游戏平台'
 
   # 流媒体和社交通讯
