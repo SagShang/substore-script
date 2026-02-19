@@ -157,7 +157,16 @@ proxy-groups:
   - {name: '🎯 全球直连', <<: *tpl_group_select_direct_first}
   - {name: '🐟 漏网之鱼', <<: *tpl_group_select_full}
 
+rule-providers:
+  custom-proxy:
+    <<: *tpl_provider_http_yaml
+    path: ./ruleset/custom-proxy.yaml
+    url: 'https://raw.githubusercontent.com/SagShang/substore-script/main/CustomProxy.yaml'
+
 rules:
+  # 自定义代理
+  - 'RULE-SET,custom-proxy,🚀 手动选择'
+
   # 私有地址
   - 'GEOSITE,private,🎯 全球直连'
   - 'GEOIP,private,🎯 全球直连,no-resolve'
