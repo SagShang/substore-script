@@ -102,14 +102,14 @@ x-templates:
   filter_region_de: &tpl_filter_region_de '(?i)(德国|德|Germany|Deutschland|Frankfurt|Berlin|Munich|\bDE\b|🇩🇪)'
 
   # proxy groups list templates
-  group_select_manual: &tpl_group_select_manual {<<: *tpl_group_select_base, proxies: ['♻️ 自动切换', '🔯 故障转移', '⚖️ 负载均衡', '🇭🇰 香港', '🇹🇼 台湾', '🇰🇷 韩国', '🇯🇵 日本', '🇸🇬 新加坡', '🇺🇲 美国', '🇬🇧 英国', '🇩🇪 德国', '🌍 全球自选', 'DIRECT']}
-  group_urltest_auto: &tpl_group_urltest_auto {<<: *tpl_group_urltest_base, proxies: ['🇭🇰 香港', '🇹🇼 台湾', '🇰🇷 韩国', '🇯🇵 日本', '🇸🇬 新加坡', '🇺🇲 美国', '🇬🇧 英国', '🇩🇪 德国', '🌍 全球自选']}
-  group_fallback_failover: &tpl_group_fallback_failover {<<: *tpl_group_fallback_base, proxies: ['🇭🇰 香港', '🇯🇵 日本', '🇸🇬 新加坡', '🇺🇲 美国']}
+  group_select_manual: &tpl_group_select_manual {<<: *tpl_group_select_base, proxies: ['♻️ 自动切换', '🔯 故障转移', '⚖️ 负载均衡', '🇭🇰 香港节点', '🇹🇼 台湾节点', '🇰🇷 韩国节点', '🇯🇵 日本节点', '🇸🇬 新加坡节点', '🇺🇲 美国节点', '🇬🇧 英国节点', '🇩🇪 德国节点', '🌍 全球自选', 'DIRECT']}
+  group_urltest_auto: &tpl_group_urltest_auto {<<: *tpl_group_urltest_base, proxies: ['🇭🇰 香港节点', '🇹🇼 台湾节点', '🇰🇷 韩国节点', '🇯🇵 日本节点', '🇸🇬 新加坡节点', '🇺🇲 美国节点', '🇬🇧 英国节点', '🇩🇪 德国节点', '🌍 全球自选']}
+  group_fallback_failover: &tpl_group_fallback_failover {<<: *tpl_group_fallback_base, proxies: ['🇭🇰 香港节点', '🇯🇵 日本节点', '🇸🇬 新加坡节点', '🇺🇲 美国节点']}
   group_loadbalance_hk: &tpl_group_loadbalance_hk {<<: *tpl_group_loadbalance_base, include-all: true, filter: *tpl_filter_region_hk}
-  group_select_full: &tpl_group_select_full {<<: *tpl_group_select_base, proxies: ['🚀 手动选择', '♻️ 自动切换', '🔯 故障转移', '⚖️ 负载均衡', '🇭🇰 香港', '🇹🇼 台湾', '🇰🇷 韩国', '🇯🇵 日本', '🇸🇬 新加坡', '🇺🇲 美国', '🇬🇧 英国', '🇩🇪 德国', '🌍 全球自选', 'DIRECT']}
-  group_select_direct_first: &tpl_group_select_direct_first {<<: *tpl_group_select_base, proxies: ['DIRECT', '🚀 手动选择', '♻️ 自动切换', '🔯 故障转移', '⚖️ 负载均衡', '🇭🇰 香港', '🇹🇼 台湾', '🇰🇷 韩国', '🇯🇵 日本', '🇸🇬 新加坡', '🇺🇲 美国', '🇬🇧 英国', '🇩🇪 德国', '🌍 全球自选']}
-  group_select_reject_first: &tpl_group_select_reject_first {<<: *tpl_group_select_base, proxies: ['REJECT', 'DIRECT', '🚀 手动选择', '♻️ 自动切换', '🔯 故障转移', '⚖️ 负载均衡', '🇭🇰 香港', '🇹🇼 台湾', '🇰🇷 韩国', '🇯🇵 日本', '🇸🇬 新加坡', '🇺🇲 美国', '🇬🇧 英国', '🇩🇪 德国', '🌍 全球自选']}
-  group_urltest_region: &tpl_group_urltest_region {<<: *tpl_group_urltest_base, include-all: true, hidden: true}
+  group_select_full: &tpl_group_select_full {<<: *tpl_group_select_base, proxies: ['🚀 手动选择', '♻️ 自动切换', '🔯 故障转移', '⚖️ 负载均衡', '🇭🇰 香港节点', '🇹🇼 台湾节点', '🇰🇷 韩国节点', '🇯🇵 日本节点', '🇸🇬 新加坡节点', '🇺🇲 美国节点', '🇬🇧 英国节点', '🇩🇪 德国节点', '🌍 全球自选', 'DIRECT']}
+  group_select_direct_first: &tpl_group_select_direct_first {<<: *tpl_group_select_base, proxies: ['DIRECT', '🚀 手动选择', '♻️ 自动切换', '🔯 故障转移', '⚖️ 负载均衡', '🇭🇰 香港节点', '🇹🇼 台湾节点', '🇰🇷 韩国节点', '🇯🇵 日本节点', '🇸🇬 新加坡节点', '🇺🇲 美国节点', '🇬🇧 英国节点', '🇩🇪 德国节点', '🌍 全球自选']}
+  group_select_reject_first: &tpl_group_select_reject_first {<<: *tpl_group_select_base, proxies: ['REJECT', 'DIRECT', '🚀 手动选择', '♻️ 自动切换', '🔯 故障转移', '⚖️ 负载均衡', '🇭🇰 香港节点', '🇹🇼 台湾节点', '🇰🇷 韩国节点', '🇯🇵 日本节点', '🇸🇬 新加坡节点', '🇺🇲 美国节点', '🇬🇧 英国节点', '🇩🇪 德国节点', '🌍 全球自选']}
+  group_urltest_region: &tpl_group_urltest_region {<<: *tpl_group_urltest_base, include-all: true}
   group_select_include_all: &tpl_group_select_include_all {<<: *tpl_group_select_base, include-all: true}
 
   # rule providers templates
@@ -124,11 +124,23 @@ proxy-groups:
   - {name: '🔯 故障转移', <<: *tpl_group_fallback_failover}
   - {name: '⚖️ 负载均衡', <<: *tpl_group_loadbalance_hk}
 
+  # region groups
+  - {name: '🇭🇰 香港节点', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_hk}
+  - {name: '🇹🇼 台湾节点', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_tw}
+  - {name: '🇯🇵 日本节点', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_jp}
+  - {name: '🇰🇷 韩国节点', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_kr}
+  - {name: '🇸🇬 新加坡节点', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_sg}
+  - {name: '🇺🇲 美国节点', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_us}
+  - {name: '🇬🇧 英国节点', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_gb}
+  - {name: '🇩🇪 德国节点', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_de}
+  - {name: '🌍 全球自选', <<: *tpl_group_select_include_all}
+
   # service groups
-  - {name: '🤖 人工智能', <<: *tpl_group_select_full}
   - {name: '🌐 谷歌服务', <<: *tpl_group_select_full}
-  - {name: '🍎 苹果服务', <<: *tpl_group_select_direct_first}
-  - {name: 'Ⓜ️ 微软服务', <<: *tpl_group_select_direct_first}
+  - {name: '🍎 苹果服务', <<: *tpl_group_select_full}
+  - {name: 'Ⓜ️ 微软服务', <<: *tpl_group_select_full}
+  - {name: '🤖 人工智能', <<: *tpl_group_select_full}
+  - {name: '🎮 游戏平台', <<: *tpl_group_select_full}
   - {name: '📲 电报消息', <<: *tpl_group_select_full}
   - {name: '🐦 推特社交', <<: *tpl_group_select_full}
   - {name: '📘 脸书社交', <<: *tpl_group_select_full}
@@ -137,23 +149,11 @@ proxy-groups:
   - {name: '🏰 迪士尼', <<: *tpl_group_select_full}
   - {name: '🎧 Spotify', <<: *tpl_group_select_full}
   - {name: '🎵 TikTok', <<: *tpl_group_select_full}
-  - {name: '🎮 游戏平台', <<: *tpl_group_select_full}
   - {name: '🪙 加密货币', <<: *tpl_group_select_full}
   - {name: '🧲 BT下载', <<: *tpl_group_select_direct_first}
   - {name: '🧹 网络净化', <<: *tpl_group_select_reject_first}
 
-  # region groups
-  - {name: '🇭🇰 香港', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_hk}
-  - {name: '🇹🇼 台湾', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_tw}
-  - {name: '🇯🇵 日本', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_jp}
-  - {name: '🇰🇷 韩国', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_kr}
-  - {name: '🇸🇬 新加坡', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_sg}
-  - {name: '🇺🇲 美国', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_us}
-  - {name: '🇬🇧 英国', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_gb}
-  - {name: '🇩🇪 德国', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_de}
-
   # fallback groups
-  - {name: '🌍 全球自选', <<: *tpl_group_select_include_all}
   - {name: '🎯 全球直连', <<: *tpl_group_select_direct_first}
   - {name: '🐟 漏网之鱼', <<: *tpl_group_select_full}
 
@@ -166,9 +166,9 @@ rules:
   - 'GEOSITE,category-ads-all,🧹 网络净化'
   - 'GEOSITE,category-porn,🧹 网络净化'
   - 'GEOSITE,category-ai-!cn,🤖 人工智能'
-  - 'GEOSITE,category-cryptocurrency,🪙 加密货币'
   - 'GEOSITE,category-public-tracker,🧲 BT下载'
   - 'GEOSITE,category-pt,🧲 BT下载'
+  - 'GEOSITE,category-cryptocurrency,🪙 加密货币'
 
   # 游戏平台和游戏下载
   - 'GEOSITE,category-game-platforms-download@cn,🎯 全球直连'
