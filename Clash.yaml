@@ -152,7 +152,7 @@ proxy-groups:
   - {name: '🎧 Spotify', <<: *tpl_group_select_full}
   - {name: '🎵 TikTok', <<: *tpl_group_select_full}
   - {name: '🪙 加密货币', <<: *tpl_group_select_full}
-  - {name: '🧲 BT下载', <<: *tpl_group_select_direct_first}
+  - {name: '🧲 BT下载', <<: *tpl_group_select_reject_first}
   - {name: '🛑 广告屏蔽', <<: *tpl_group_select_reject_first}
 
   # fallback groups
