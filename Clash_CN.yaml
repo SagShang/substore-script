@@ -108,6 +108,7 @@ x-templates:
   group_loadbalance_hk: &tpl_group_loadbalance_hk {<<: *tpl_group_loadbalance_base, include-all: true, filter: *tpl_filter_region_hk}
   group_select_full: &tpl_group_select_full {<<: *tpl_group_select_base, proxies: ['🚀 手动选择', '♻️ 自动切换', '🔯 故障转移', '⚖️ 负载均衡', '🇭🇰 香港', '🇹🇼 台湾', '🇰🇷 韩国', '🇯🇵 日本', '🇸🇬 新加坡', '🇺🇲 美国', '🇬🇧 英国', '🇩🇪 德国', '🌍 全球自选', 'DIRECT']}
   group_select_direct_first: &tpl_group_select_direct_first {<<: *tpl_group_select_base, proxies: ['DIRECT', '🚀 手动选择', '♻️ 自动切换', '🔯 故障转移', '⚖️ 负载均衡', '🇭🇰 香港', '🇹🇼 台湾', '🇰🇷 韩国', '🇯🇵 日本', '🇸🇬 新加坡', '🇺🇲 美国', '🇬🇧 英国', '🇩🇪 德国', '🌍 全球自选']}
+  group_select_reject_first: &tpl_group_select_reject_first {<<: *tpl_group_select_base, proxies: ['REJECT', 'DIRECT', '🚀 手动选择', '♻️ 自动切换', '🔯 故障转移', '⚖️ 负载均衡', '🇭🇰 香港', '🇹🇼 台湾', '🇰🇷 韩国', '🇯🇵 日本', '🇸🇬 新加坡', '🇺🇲 美国', '🇬🇧 英国', '🇩🇪 德国', '🌍 全球自选']}
   group_urltest_region: &tpl_group_urltest_region {<<: *tpl_group_urltest_base, include-all: true, hidden: true}
   group_select_include_all: &tpl_group_select_include_all {<<: *tpl_group_select_base, include-all: true}
 
@@ -124,10 +125,7 @@ proxy-groups:
   - {name: '⚖️ 负载均衡', <<: *tpl_group_loadbalance_hk}
 
   # service groups
-  - {name: '🤖 OpenAI', <<: *tpl_group_select_full}
-  - {name: '✨ Gemini', <<: *tpl_group_select_full}
-  - {name: '🧠 Claude', <<: *tpl_group_select_full}
-  - {name: '🐙 GitHub', <<: *tpl_group_select_full}
+  - {name: '🤖 人工智能', <<: *tpl_group_select_full}
   - {name: '🌐 谷歌服务', <<: *tpl_group_select_full}
   - {name: '🍎 苹果服务', <<: *tpl_group_select_direct_first}
   - {name: 'Ⓜ️ 微软服务', <<: *tpl_group_select_direct_first}
@@ -141,8 +139,9 @@ proxy-groups:
   - {name: '🎧 Spotify', <<: *tpl_group_select_full}
   - {name: '🎵 TikTok', <<: *tpl_group_select_full}
   - {name: '🎮 游戏平台', <<: *tpl_group_select_full}
-  - {name: '📥 下载工具', <<: *tpl_group_select_direct_first}
   - {name: '🪙 加密货币', <<: *tpl_group_select_full}
+  - {name: '🧲 BT下载', <<: *tpl_group_select_direct_first}
+  - {name: '🧹 网络净化', <<: *tpl_group_select_reject_first}
 
   # region groups
   - {name: '🇭🇰 香港', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_hk}
@@ -159,61 +158,46 @@ proxy-groups:
   - {name: '🎯 全球直连', <<: *tpl_group_select_direct_first}
   - {name: '🐟 漏网之鱼', <<: *tpl_group_select_full}
 
-rule-providers:
-  # 1. base rules
-  Local: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml', path: './ruleset/Lan.yaml'}
-  China: {<<: *tpl_provider_http_text, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.list', path: './ruleset/ChinaMax.list'}
-
-  # 2. service rules
-  OpenAI: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml', path: './ruleset/OpenAI.yaml'}
-  Gemini: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.yaml', path: './ruleset/Gemini.yaml'}
-  Claude: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml', path: './ruleset/Claude.yaml'}
-  Github: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml', path: './ruleset/Github.yaml'}
-  Apple: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical.yaml', path: './ruleset/Apple.yaml'}
-  Microsoft: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml', path: './ruleset/Microsoft.yaml'}
-  Google: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml', path: './ruleset/Google.yaml'}
-  Telegram: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml', path: './ruleset/Telegram.yaml'}
-  Twitter: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml', path: './ruleset/Twitter.yaml'}
-  Facebook: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml', path: './ruleset/Facebook.yaml'}
-  Game: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml', path: './ruleset/Game.yaml'}
-  GameDownload: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownload/GameDownload.yaml', path: './ruleset/GameDownload.yaml'}
-  GameDownloadCN: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownloadCN/GameDownloadCN.yaml', path: './ruleset/GameDownloadCN.yaml'}
-  Crypto: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Crypto/Crypto.yaml', path: './ruleset/Crypto.yaml'}
-  YouTube: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml', path: './ruleset/YouTube.yaml'}
-  Netflix: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml', path: './ruleset/Netflix.yaml'}
-  Disney: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml', path: './ruleset/Disney.yaml'}
-  Spotify: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml', path: './ruleset/Spotify.yaml'}
-  TikTok: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml', path: './ruleset/TikTok.yaml'}
-  OneDrive: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml', path: './ruleset/OneDrive.yaml'}
-  Download: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml', path: './ruleset/Download.yaml'}
-
-  # 3. custom rules
-  CryptoCustom: {<<: *tpl_provider_http_yaml, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/SagShang/substore-script/main/CryptoCustom.yaml', path: './ruleset/CryptoCustom.yaml'}
-
 rules:
-  - 'RULE-SET,Local,🎯 全球直连'
-  - 'RULE-SET,OpenAI,🤖 OpenAI'
-  - 'RULE-SET,Gemini,✨ Gemini'
-  - 'RULE-SET,Claude,🧠 Claude'
-  - 'RULE-SET,Github,🐙 GitHub'
-  - 'RULE-SET,OneDrive,☁️ 微软网盘'
-  - 'RULE-SET,Download,📥 下载工具'
-  - 'RULE-SET,GameDownloadCN,📥 下载工具'
-  - 'RULE-SET,GameDownload,📥 下载工具'
-  - 'RULE-SET,Game,🎮 游戏平台'
-  - 'RULE-SET,CryptoCustom,🪙 加密货币'
-  - 'RULE-SET,Crypto,🪙 加密货币'
-  - 'RULE-SET,YouTube,📹 油管视频'
-  - 'RULE-SET,Netflix,🎬 奈飞影视'
-  - 'RULE-SET,Disney,🏰 迪士尼'
-  - 'RULE-SET,Spotify,🎧 Spotify'
-  - 'RULE-SET,TikTok,🎵 TikTok'
-  - 'RULE-SET,Telegram,📲 电报消息'
-  - 'RULE-SET,Twitter,🐦 推特社交'
-  - 'RULE-SET,Facebook,📘 脸书社交'
-  - 'RULE-SET,Microsoft,Ⓜ️ 微软服务'
-  - 'RULE-SET,Apple,🍎 苹果服务'
-  - 'RULE-SET,Google,🌐 谷歌服务'
-  - 'RULE-SET,China,🎯 全球直连'
+  # 私有地址
+  - 'GEOSITE,private,🎯 全球直连'
+  - 'GEOIP,private,🎯 全球直连,no-resolve'
+
+  # 常用
+  - 'GEOSITE,category-ads-all,🧹 网络净化'
+  - 'GEOSITE,category-porn,🧹 网络净化'
+  - 'GEOSITE,category-ai-!cn,🤖 人工智能'
+  - 'GEOSITE,onedrive,☁️ 微软网盘'
+  - 'GEOSITE,category-cryptocurrency,🪙 加密货币'
+  - 'GEOSITE,category-public-tracker,🧲 BT下载'
+  - 'GEOSITE,category-pt,🧲 BT下载'
+
+  # 游戏平台和游戏下载
+  - 'GEOSITE,category-game-platforms-download@cn,🎯 全球直连'
+  - 'GEOSITE,category-game-platforms-download,🎮 游戏平台'
+  - 'GEOSITE,category-games-cn,🎯 全球直连'
+  - 'GEOSITE,category-games-!cn@cn,🎯 全球直连'
+  - 'GEOSITE,category-games-!cn,🎮 游戏平台'
+
+  # 流媒体和社交通讯
+  - 'GEOSITE,youtube,📹 油管视频'
+  - 'GEOSITE,netflix,🎬 奈飞影视'
+  - 'GEOSITE,disney,🏰 迪士尼'
+  - 'GEOSITE,spotify,🎧 Spotify'
+  - 'GEOSITE,tiktok,🎵 TikTok'
+  - 'GEOSITE,telegram,📲 电报消息'
+  - 'GEOSITE,twitter,🐦 推特社交'
+  - 'GEOSITE,facebook,📘 脸书社交'
+
+  # 大厂服务
+  - 'GEOSITE,microsoft@cn,🎯 全球直连'
+  - 'GEOSITE,microsoft,Ⓜ️ 微软服务'
+  - 'GEOSITE,apple@cn,🎯 全球直连'
+  - 'GEOSITE,apple,🍎 苹果服务'
+  - 'GEOSITE,google@cn,🎯 全球直连'
+  - 'GEOSITE,google,🌐 谷歌服务'
+
+  # 兜底策略
+  - 'GEOSITE,cn,🎯 全球直连'
   - 'GEOIP,CN,🎯 全球直连,no-resolve'
   - 'MATCH,🐟 漏网之鱼'
