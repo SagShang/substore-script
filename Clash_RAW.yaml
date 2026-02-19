@@ -89,9 +89,9 @@ x-templates:
   # proxy groups templates
   group_select_base: &tpl_group_select_base {type: 'select'}
   group_probe_base: &tpl_group_probe_base {url: 'https://www.gstatic.com/generate_204', interval: 300}
-  group_urltest_base: &tpl_group_urltest_base {<<: *tpl_group_probe_base, type: 'url-test', tolerance: 100}
+  group_urltest_base: &tpl_group_urltest_base {<<: *tpl_group_probe_base, type: 'url-test', tolerance: 50}
   group_fallback_base: &tpl_group_fallback_base {<<: *tpl_group_probe_base, type: 'fallback'}
-  group_loadbalance_base: &tpl_group_loadbalance_base {<<: *tpl_group_probe_base, type: 'load-balance', strategy: 'sticky-sessions', expected-status: 204}
+  group_loadbalance_base: &tpl_group_loadbalance_base {<<: *tpl_group_probe_base, type: 'load-balance', strategy: 'sticky-sessions'}
 
   # region filter templates
   filter_region_hk: &tpl_filter_region_hk '(?i)(香港|港|Hong[\s_-]?Kong|\bHK\b|🇭🇰)'
