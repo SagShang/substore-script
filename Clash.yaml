@@ -198,4 +198,9 @@ rules:
   # 兜底策略
   - 'GEOSITE,cn,🎯 全球直连'
   - 'GEOIP,CN,🎯 全球直连,no-resolve'
+  - 'GEOIP,telegram,📲 电报消息,no-resolve'
+  - 'GEOIP,netflix,🎬 奈飞影视,no-resolve'
+  - 'GEOIP,twitter,🐦 推特社交,no-resolve'
+  - 'GEOIP,facebook,📘 脸书社交,no-resolve'
+  - 'GEOIP,google,🌐 谷歌服务,no-resolve'
   - 'MATCH,🐟 漏网之鱼'
