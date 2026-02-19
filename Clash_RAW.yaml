@@ -151,7 +151,7 @@ proxy-groups:
   - {name: '🎵 TikTok', <<: *tpl_group_select_full}
   - {name: '🪙 加密货币', <<: *tpl_group_select_full}
   - {name: '🧲 BT下载', <<: *tpl_group_select_direct_first}
-  - {name: '🧹 网络净化', <<: *tpl_group_select_reject_first}
+  - {name: '🛑 广告屏蔽', <<: *tpl_group_select_reject_first}
 
   # fallback groups
   - {name: '🎯 全球直连', <<: *tpl_group_select_direct_first}
@@ -172,8 +172,7 @@ rules:
   - 'GEOIP,private,🎯 全球直连,no-resolve'
 
   # 常用
-  - 'GEOSITE,category-ads-all,🧹 网络净化'
-  - 'GEOSITE,category-porn,🧹 网络净化'
+  - 'GEOSITE,category-ads-all,🛑 广告屏蔽'
   - 'GEOSITE,category-ai-!cn,🤖 人工智能'
   - 'GEOSITE,category-public-tracker,🧲 BT下载'
   - 'GEOSITE,category-pt,🧲 BT下载'
