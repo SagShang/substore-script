@@ -89,7 +89,7 @@ x-templates:
   # proxy groups templates
   group_select_base: &tpl_group_select_base {type: 'select'}
   group_probe_base: &tpl_group_probe_base {url: 'https://www.gstatic.com/generate_204', interval: 300}
-  group_urltest_base: &tpl_group_urltest_base {<<: *tpl_group_probe_base, type: 'url-test', tolerance: 50}
+  group_urltest_base: &tpl_group_urltest_base {<<: *tpl_group_probe_base, type: 'url-test'}
   group_fallback_base: &tpl_group_fallback_base {<<: *tpl_group_probe_base, type: 'fallback'}
   group_loadbalance_base: &tpl_group_loadbalance_base {<<: *tpl_group_probe_base, type: 'load-balance', strategy: 'sticky-sessions'}
 
