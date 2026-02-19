@@ -143,7 +143,6 @@ proxy-groups:
   - {name: 'Ⓜ️ 微软服务', <<: *tpl_group_select_full}
   - {name: '🤖 人工智能', <<: *tpl_group_select_full}
   - {name: '🎮 游戏平台', <<: *tpl_group_select_full}
-  - {name: '📥 游戏下载', <<: *tpl_group_select_direct_first}
   - {name: '📲 电报消息', <<: *tpl_group_select_full}
   - {name: '🐦 推特社交', <<: *tpl_group_select_full}
   - {name: '📘 脸书社交', <<: *tpl_group_select_full}
@@ -185,7 +184,7 @@ rules:
   - 'GEOSITE,category-game-platforms-download@cn,🎯 全球直连'
   - 'GEOSITE,category-game-platforms-download,🎮 游戏平台'
   - 'GEOSITE,category-games-cn,🎯 全球直连'
-  - 'GEOSITE,category-games-!cn@cn,📥 游戏下载'
+  - 'GEOSITE,category-games-!cn@cn,🎯 全球直连'
   - 'GEOSITE,category-games-!cn,🎮 游戏平台'
 
   # 流媒体和社交通讯
