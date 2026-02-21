@@ -195,9 +195,9 @@ rules:
   - 'GEOSITE,tiktok,🎵 抖音国际'
   - 'GEOSITE,telegram,📲 电报消息'
   - 'GEOIP,telegram,📲 电报消息,no-resolve'
-  - 'GEOSITE,twitter,🐦 推特社交'
+  - 'GEOSITE,x,🐦 推特社交'
   - 'GEOIP,twitter,🐦 推特社交,no-resolve'
-  - 'GEOSITE,facebook,📘 脸书社交'
+  - 'GEOSITE,meta,📘 脸书社交'
   - 'GEOIP,facebook,📘 脸书社交,no-resolve'
 
   # 大厂服务
