@@ -28,6 +28,8 @@ sniffer:
     QUIC:
       ports: [443, 8443]
   skip-domain:
+    - '+.lan'
+    - '+.local'
     - 'Mijia Cloud'
     - '+.push.apple.com'
     - '+.msftconnecttest.com'
@@ -35,7 +37,7 @@ sniffer:
 
 dns:
   enable: true
-  listen: 0.0.0.0:1053
+  listen: 127.0.0.1:1053
   ipv6: false
   respect-rules: true
   prefer-h3: false
@@ -46,23 +48,21 @@ dns:
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
-    - '*.lan'
-    - '*.local'
-    - '*.localhost'
-    - '+.arpa'
+    - '+.lan'
+    - '+.local'
     - 'time.*.com'
-    - 'time.*.gov'
+    - 'ntp.*.com'
     - '+.ntp.org'
-    - '+.pool.ntp.org'
+    - '+.market.xiaomi.com'
     - 'geosite:connectivity-check'
     - 'geosite:private'
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
-  nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
   proxy-server-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   nameserver-policy:
@@ -72,16 +72,15 @@ dns:
     'geosite:cn':
       - https://dns.alidns.com/dns-query
       - https://doh.pub/dns-query
-    '+.local':
-      - 223.5.5.5
+    'geosite:gfw':
+      - https://dns.cloudflare.com/dns-query#RULES
+      - https://dns.google/dns-query#RULES
   fallback:
     - https://dns.cloudflare.com/dns-query#RULES
     - https://dns.google/dns-query#RULES
   fallback-filter:
     geoip: true
     geoip-code: CN
-    geosite:
-      - gfw
     ipcidr:
       - 240.0.0.0/4
 
