@@ -151,7 +151,7 @@ proxy-groups:
   - {name: '🎧 Spotify', <<: *tpl_group_select_full}
   - {name: '🎵 TikTok', <<: *tpl_group_select_full}
   - {name: '🪙 加密货币', <<: *tpl_group_select_full}
-  - {name: '🧲 BT下载', <<: *tpl_group_select_reject_first}
+  - {name: '🧲 磁力下载', <<: *tpl_group_select_reject_first}
   - {name: '🛑 广告屏蔽', <<: *tpl_group_select_reject_first}
 
   # fallback groups
@@ -175,8 +175,8 @@ rules:
   # 常用
   - 'GEOSITE,category-ads-all,🛑 广告屏蔽'
   - 'GEOSITE,category-ai-!cn,🤖 人工智能'
-  - 'GEOSITE,category-public-tracker,🧲 BT下载'
-  - 'GEOSITE,category-pt,🧲 BT下载'
+  - 'GEOSITE,category-public-tracker,🧲 磁力下载'
+  - 'GEOSITE,category-pt,🧲 磁力下载'
   - 'GEOSITE,category-cryptocurrency,🪙 加密货币'
 
   # 游戏平台和游戏下载
