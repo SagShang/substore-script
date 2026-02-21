@@ -192,7 +192,7 @@ rules:
   - 'GEOIP,netflix,🎬 奈飞影视,no-resolve'
   - 'GEOSITE,disney,🏰 迪士影视'
   - 'GEOSITE,spotify,🎧 声田音乐'
-  - 'GEOSITE,tiktok,🎵 抖音国际'
+  - 'GEOSITE,bytedance@!cn,🎵 抖音国际'
   - 'GEOSITE,telegram,📲 电报消息'
   - 'GEOIP,telegram,📲 电报消息,no-resolve'
   - 'GEOSITE,x,🐦 推特社交'
