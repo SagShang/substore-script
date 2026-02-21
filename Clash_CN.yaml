@@ -147,9 +147,9 @@ proxy-groups:
   - {name: '📘 脸书社交', <<: *tpl_group_select_full}
   - {name: '📹 油管视频', <<: *tpl_group_select_full}
   - {name: '🎬 奈飞影视', <<: *tpl_group_select_full}
-  - {name: '🏰 迪士尼', <<: *tpl_group_select_full}
-  - {name: '🎧 Spotify', <<: *tpl_group_select_full}
-  - {name: '🎵 TikTok', <<: *tpl_group_select_full}
+  - {name: '🏰 迪士影视', <<: *tpl_group_select_full}
+  - {name: '🎧 声田音乐', <<: *tpl_group_select_full}
+  - {name: '🎵 抖音国际', <<: *tpl_group_select_full}
   - {name: '🪙 加密货币', <<: *tpl_group_select_full}
   - {name: '🧲 磁力下载', <<: *tpl_group_select_reject_first}
   - {name: '🛑 广告屏蔽', <<: *tpl_group_select_reject_first}
@@ -190,9 +190,9 @@ rules:
   - 'GEOSITE,youtube,📹 油管视频'
   - 'GEOSITE,netflix,🎬 奈飞影视'
   - 'GEOIP,netflix,🎬 奈飞影视,no-resolve'
-  - 'GEOSITE,disney,🏰 迪士尼'
-  - 'GEOSITE,spotify,🎧 Spotify'
-  - 'GEOSITE,tiktok,🎵 TikTok'
+  - 'GEOSITE,disney,🏰 迪士影视'
+  - 'GEOSITE,spotify,🎧 声田音乐'
+  - 'GEOSITE,tiktok,🎵 抖音国际'
   - 'GEOSITE,telegram,📲 电报消息'
   - 'GEOIP,telegram,📲 电报消息,no-resolve'
   - 'GEOSITE,twitter,🐦 推特社交'
