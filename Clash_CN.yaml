@@ -87,8 +87,8 @@ dns:
 x-templates:
   # proxy groups templates
   group_select_base: &tpl_group_select_base {type: 'select'}
-  group_probe_base: &tpl_group_probe_base {url: 'https://cp.cloudflare.com/generate_204', interval: 300}
-  group_urltest_base: &tpl_group_urltest_base {<<: *tpl_group_probe_base, type: 'url-test'}
+  group_probe_base: &tpl_group_probe_base {url: 'https://cp.cloudflare.com/generate_204', interval: 300, timeout: 3000}
+  group_urltest_base: &tpl_group_urltest_base {<<: *tpl_group_probe_base, type: 'url-test', tolerance: 100}
   group_fallback_base: &tpl_group_fallback_base {<<: *tpl_group_probe_base, type: 'fallback'}
 
   # region filter templates
