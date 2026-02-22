@@ -90,26 +90,21 @@ x-templates:
   group_probe_base: &tpl_group_probe_base {url: 'https://cp.cloudflare.com/generate_204', interval: 300}
   group_urltest_base: &tpl_group_urltest_base {<<: *tpl_group_probe_base, type: 'url-test'}
   group_fallback_base: &tpl_group_fallback_base {<<: *tpl_group_probe_base, type: 'fallback'}
-  group_loadbalance_base: &tpl_group_loadbalance_base {<<: *tpl_group_probe_base, type: 'load-balance', strategy: 'sticky-sessions'}
 
   # region filter templates
   filter_region_hk: &tpl_filter_region_hk '(?i)(香港|港|Hong[\s_-]?Kong|\bHK\b|🇭🇰)'
   filter_region_tw: &tpl_filter_region_tw '(?i)(台湾|台|Taiwan|Taipei|Kaohsiung|\bTW\b|\bTWN\b|🇹🇼)'
   filter_region_jp: &tpl_filter_region_jp '(?i)(日本|日|Japan|Tokyo|Osaka|\bJP\b|\bJPN\b|🇯🇵)'
-  filter_region_kr: &tpl_filter_region_kr '(?i)(韩国|韩|Korea|Seoul|\bKR\b|\bKOR\b|🇰🇷)'
   filter_region_sg: &tpl_filter_region_sg '(?i)(新加坡|狮城|Singapore|\bSG\b|\bSGP\b|🇸🇬)'
   filter_region_us: &tpl_filter_region_us '(?i)(美国|美|United[\s_-]?States|America|\bUS\b|\bUSA\b|Los[\s_-]?Angeles|San[\s_-]?Jose|Santa[\s_-]?Clara|Seattle|Chicago|Dallas|Phoenix|Portland|Oregon|Fremont|Las[\s_-]?Vegas|Silicon[\s_-]?Valley|🇺🇸|🇺🇲)'
-  filter_region_gb: &tpl_filter_region_gb '(?i)(英国|英|United[\s_-]?Kingdom|Great[\s_-]?Britain|Britain|England|London|Manchester|\bUK\b|\bGB\b|🇬🇧)'
-  filter_region_de: &tpl_filter_region_de '(?i)(德国|德|Germany|Deutschland|Frankfurt|Berlin|Munich|\bDE\b|🇩🇪)'
 
   # proxy groups list templates
-  group_select_manual: &tpl_group_select_manual {<<: *tpl_group_select_base, proxies: ['♻️ 自动切换', '🔯 故障转移', '⚖️ 负载均衡', '🇭🇰 香港节点', '🇹🇼 台湾节点', '🇰🇷 韩国节点', '🇯🇵 日本节点', '🇸🇬 狮城节点', '🇺🇲 美国节点', '🇬🇧 英国节点', '🇩🇪 德国节点', '🌍 全球自选', 'DIRECT']}
-  group_urltest_auto: &tpl_group_urltest_auto {<<: *tpl_group_urltest_base, proxies: ['🇭🇰 香港节点', '🇹🇼 台湾节点', '🇰🇷 韩国节点', '🇯🇵 日本节点', '🇸🇬 狮城节点', '🇺🇲 美国节点', '🇬🇧 英国节点', '🇩🇪 德国节点', '🌍 全球自选']}
-  group_fallback_failover: &tpl_group_fallback_failover {<<: *tpl_group_fallback_base, proxies: ['🇭🇰 香港节点', '🇯🇵 日本节点', '🇸🇬 狮城节点', '🇺🇲 美国节点']}
-  group_loadbalance_hk: &tpl_group_loadbalance_hk {<<: *tpl_group_loadbalance_base, include-all: true, filter: *tpl_filter_region_hk}
-  group_select_full: &tpl_group_select_full {<<: *tpl_group_select_base, proxies: ['🚀 手动选择', '♻️ 自动切换', '🔯 故障转移', '⚖️ 负载均衡', '🇭🇰 香港节点', '🇹🇼 台湾节点', '🇰🇷 韩国节点', '🇯🇵 日本节点', '🇸🇬 狮城节点', '🇺🇲 美国节点', '🇬🇧 英国节点', '🇩🇪 德国节点', '🌍 全球自选', 'DIRECT', 'REJECT']}
-  group_select_direct_first: &tpl_group_select_direct_first {<<: *tpl_group_select_base, proxies: ['DIRECT', '🚀 手动选择', '♻️ 自动切换', '🔯 故障转移', '⚖️ 负载均衡', '🇭🇰 香港节点', '🇹🇼 台湾节点', '🇰🇷 韩国节点', '🇯🇵 日本节点', '🇸🇬 狮城节点', '🇺🇲 美国节点', '🇬🇧 英国节点', '🇩🇪 德国节点', '🌍 全球自选', 'REJECT']}
-  group_select_reject_first: &tpl_group_select_reject_first {<<: *tpl_group_select_base, proxies: ['REJECT', '🚀 手动选择', '♻️ 自动切换', '🔯 故障转移', '⚖️ 负载均衡', '🇭🇰 香港节点', '🇹🇼 台湾节点', '🇰🇷 韩国节点', '🇯🇵 日本节点', '🇸🇬 狮城节点', '🇺🇲 美国节点', '🇬🇧 英国节点', '🇩🇪 德国节点', '🌍 全球自选', 'DIRECT']}
+  group_select_manual: &tpl_group_select_manual {<<: *tpl_group_select_base, proxies: ['♻️ 自动切换', '🔯 故障转移', '🇭🇰 香港节点', '🇹🇼 台湾节点', '🇯🇵 日本节点', '🇸🇬 狮城节点', '🇺🇲 美国节点', '🌍 全球自选', 'DIRECT']}
+  group_urltest_auto: &tpl_group_urltest_auto {<<: *tpl_group_urltest_base, proxies: ['🇭🇰 香港节点', '🇹🇼 台湾节点', '🇯🇵 日本节点', '🇸🇬 狮城节点', '🇺🇲 美国节点', '🌍 全球自选']}
+  group_fallback_failover: &tpl_group_fallback_failover {<<: *tpl_group_fallback_base, proxies: ['🇭🇰 香港节点', '🇹🇼 台湾节点', '🇯🇵 日本节点', '🇸🇬 狮城节点', '🇺🇲 美国节点', '🌍 全球自选']}
+  group_select_full: &tpl_group_select_full {<<: *tpl_group_select_base, proxies: ['🚀 手动选择', '♻️ 自动切换', '🔯 故障转移', '🇭🇰 香港节点', '🇹🇼 台湾节点', '🇯🇵 日本节点', '🇸🇬 狮城节点', '🇺🇲 美国节点', '🌍 全球自选', 'DIRECT', 'REJECT']}
+  group_select_direct_first: &tpl_group_select_direct_first {<<: *tpl_group_select_base, proxies: ['DIRECT', '🚀 手动选择', '♻️ 自动切换', '🔯 故障转移', '🇭🇰 香港节点', '🇹🇼 台湾节点', '🇯🇵 日本节点', '🇸🇬 狮城节点', '🇺🇲 美国节点', '🌍 全球自选', 'REJECT']}
+  group_select_reject_first: &tpl_group_select_reject_first {<<: *tpl_group_select_base, proxies: ['REJECT', '🚀 手动选择', '♻️ 自动切换', '🔯 故障转移', '🇭🇰 香港节点', '🇹🇼 台湾节点', '🇯🇵 日本节点', '🇸🇬 狮城节点', '🇺🇲 美国节点', '🌍 全球自选', 'DIRECT']}
   group_urltest_region: &tpl_group_urltest_region {<<: *tpl_group_urltest_base, include-all: true}
   group_select_include_all: &tpl_group_select_include_all {<<: *tpl_group_select_base, include-all: true}
 
@@ -123,17 +118,13 @@ proxy-groups:
   - {name: '🚀 手动选择', <<: *tpl_group_select_manual}
   - {name: '♻️ 自动切换', <<: *tpl_group_urltest_auto}
   - {name: '🔯 故障转移', <<: *tpl_group_fallback_failover}
-  - {name: '⚖️ 负载均衡', <<: *tpl_group_loadbalance_hk}
 
   # region groups
   - {name: '🇭🇰 香港节点', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_hk}
   - {name: '🇹🇼 台湾节点', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_tw}
   - {name: '🇯🇵 日本节点', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_jp}
-  - {name: '🇰🇷 韩国节点', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_kr}
   - {name: '🇸🇬 狮城节点', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_sg}
   - {name: '🇺🇲 美国节点', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_us}
-  - {name: '🇬🇧 英国节点', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_gb}
-  - {name: '🇩🇪 德国节点', <<: *tpl_group_urltest_region, filter: *tpl_filter_region_de}
   - {name: '🌍 全球自选', <<: *tpl_group_select_include_all}
 
   # service groups
