@@ -75,6 +75,7 @@ rule-providers:
 rules:
   # 自定义代理
   - 'RULE-SET,custom-proxy,🚀 手动选择'
+  - 'PROCESS-NAME,WinStore.App.exe,🎯 全球直连'
 
   # 私有地址
   - 'GEOSITE,private,🎯 全球直连'
